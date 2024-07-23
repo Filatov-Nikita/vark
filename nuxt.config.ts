@@ -5,5 +5,12 @@ export default defineNuxtConfig({
   modules: ["@pinia/nuxt"],
   pinia: {
     storesDirs: ['./stores/**'],
-  }
+  },
+  css: ['~/assets/scss/app.scss'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
 })
