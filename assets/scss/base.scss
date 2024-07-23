@@ -1,0 +1,6 @@
+@layer base {
+  body {
+    font-family: 'WixMadeforDisplay', Arial, sans-serif;
+    @apply tw-text-body-s-regular tw-text-white tw-bg-bg-grafit;
+  }
+}
