@@ -14,7 +14,7 @@
       font-weight: 800;
 
       &:hover {
-        color: #979797;
+        @apply tw-text-text-gray-hover;
       }
     }
   }

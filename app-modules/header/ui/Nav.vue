@@ -22,7 +22,7 @@
 
     &__link {
       &:hover {
-        color: #979797;
+        @apply tw-text-text-gray-hover;
       }
     }
   }

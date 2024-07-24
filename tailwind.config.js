@@ -16,6 +16,7 @@ export default {
       'white': '#FFFFFF',
       'bg-grafit': '#1B1B1B',
       'text-gray': '#9D9D9D',
+      'text-gray-hover': '#979797',
       'text-dark': '#0F0F0F',
     },
     fontSize: {
