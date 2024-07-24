@@ -28,6 +28,10 @@ export default {
         'lineHeight': '22px',
         'fontWeight': '400',
       }],
+      'body-m-extra-bold': ['18px', {
+        'lineHeight': '22px',
+        'fontWeight': '800',
+      }],
       'h1-extra-bold': ['70px', {
         'lineHeight': '84px',
         'fontWeight': '800',
@@ -35,6 +39,10 @@ export default {
       'h2-extra-bold': ['50px', {
         'lineHeight': '65px',
         'fontWeight': '800',
+      }],
+      'h3-bold': ['24px', {
+        'lineHeight': '32px',
+        'fontWeight': '700',
       }],
     },
     spacing: {
