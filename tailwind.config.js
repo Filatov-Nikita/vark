@@ -13,6 +13,7 @@ export default {
   theme: {
     colors: {
       'primary': '#E40000',
+      'primary-hover': '#CC0000',
       'white': '#FFFFFF',
       'bg-grafit': '#1B1B1B',
       'text-gray': '#9D9D9D',
