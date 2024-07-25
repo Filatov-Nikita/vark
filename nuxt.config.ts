@@ -1,4 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
+import path from 'path';
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   app: {
@@ -18,4 +22,17 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  vite: {
+    plugins: [
+      createSvgIconsPlugin({
+        iconDirs: [ path.resolve(process.cwd(), 'assets/icons') ],
+        symbolId: 'icon-[dir]-[name]',
+        inject: 'body-last',
+        customDomId: '__svg__icons__dom__',
+      }),
+    ],
+  },
+  plugins: [
+    '~/plugins/icons-sprite.ts',
+  ],
 })
