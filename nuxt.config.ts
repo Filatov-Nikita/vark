@@ -35,6 +35,13 @@ export default defineNuxtConfig({
         customDomId: '__svg__icons__dom__',
       }),
     ],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@import "~/assets/scss/mixins/index.scss";`
+        }
+      }
+    },
   },
   plugins: [
     '~/plugins/icons-sprite.ts',

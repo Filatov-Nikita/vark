@@ -2,4 +2,17 @@
   max-width: 1260px;
   margin: 0 auto;
   padding: 0 30px;
+
+  @include lg {
+    max-width: 960px;
+    padding: 0 15px;
+  }
+
+  @include md {
+    max-width: 720px;
+  }
+
+  @include sm {
+    max-width: 540px;
+  }
 }
