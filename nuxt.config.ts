@@ -11,7 +11,10 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  modules: ["@pinia/nuxt"],
+  modules: [
+    '@pinia/nuxt',
+    '@vee-validate/nuxt',
+  ],
   pinia: {
     storesDirs: ['./stores/**'],
   },
@@ -34,5 +37,6 @@ export default defineNuxtConfig({
   },
   plugins: [
     '~/plugins/icons-sprite.ts',
+    '~/plugins/yup-locales.ts',
   ],
 })
