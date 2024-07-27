@@ -1,13 +1,31 @@
 <template>
-  <div>
-    <slot />
+  <div class="l-def">
+    <div class="l-def__header">
+      <div class="wrapper">
+        <Header />
+      </div>
+    </div>
+    <main>
+      <slot />
+    </main>
+    <Footer />
   </div>
 </template>
 
 <script lang="ts" setup>
-
+  import Header from '@/app-modules/header/ui/index.vue';
+  import Footer from '@/app-modules/footer/ui/index.vue';
 </script>
 
-<style>
+<style scoped lang="scss">
+  .l-def {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 
+    &__header {
+      @apply tw-pt-30;
+    }
+  }
 </style>
