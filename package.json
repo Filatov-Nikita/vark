@@ -11,10 +11,14 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.5.1",
+    "@vee-validate/nuxt": "^4.13.2",
+    "@vee-validate/yup": "^4.13.2",
+    "maska": "^3.0.0",
     "nuxt": "^3.12.4",
     "pinia": "^2.1.7",
     "vite-plugin-svg-icons": "^2.0.1",
-    "vue": "latest"
+    "vue": "latest",
+    "yup-locales": "^1.2.25"
   },
   "overrides": {
     "vue": "latest"
