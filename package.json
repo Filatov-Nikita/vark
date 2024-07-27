@@ -15,6 +15,7 @@
     "@vee-validate/yup": "^4.13.2",
     "maska": "^3.0.0",
     "nuxt": "^3.12.4",
+    "nuxt-swiper": "^1.2.2",
     "pinia": "^2.1.7",
     "vite-plugin-svg-icons": "^2.0.1",
     "vue": "latest",
