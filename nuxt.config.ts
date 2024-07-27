@@ -14,6 +14,7 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
     '@vee-validate/nuxt',
+    'nuxt-swiper',
   ],
   pinia: {
     storesDirs: ['./stores/**'],
