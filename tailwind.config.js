@@ -29,6 +29,10 @@ export default {
         'lineHeight': '22px',
         'fontWeight': '400',
       }],
+      'body-m-bold': ['18px', {
+        'lineHeight': '22px',
+        'fontWeight': '700',
+      }],
       'body-m-extra-bold': ['18px', {
         'lineHeight': '22px',
         'fontWeight': '800',

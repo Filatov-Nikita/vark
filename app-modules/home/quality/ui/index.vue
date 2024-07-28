@@ -1,0 +1,64 @@
+<template>
+  <section class="quality">
+    <div class="wrapper">
+      <h2 class="h2 h-mb-50">Контроль качества <span class=" tw-text-primary">продукции</span></h2>
+      <div class="quality__wrap">
+        <article
+          class="quality-item"
+          v-for="(step, index) in steps"
+          :style="{
+            '--color': step.color,
+            '--w': step.width,
+            '--text-w': step.text_w,
+          }"
+        >
+          <div class="quality-item__head">
+            <h3>Шаг {{ index + 1 }}</h3>
+          </div>
+          <p class="quality-item__text" v-html="step.text"></p>
+        </article>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts">
+  import steps from '../model/steps';
+</script>
+
+<style scoped lang="scss">
+  .quality {
+    padding-top: 120px;
+    padding-bottom: 60px;
+
+    &__wrap {
+      overflow-y: hidden;
+      padding-bottom: 40px;
+      width: 100%;
+      display: flex;
+    }
+  }
+
+  .quality-item {
+    position: relative;
+    min-width: var(--w);
+    width: 100%;
+
+    &:not(:first-child) {
+      margin-left: -24px;
+    }
+
+    &__head {
+      padding: 13px 24px;
+      background: var(--color);
+      border-radius: 10px;
+      @apply tw-text-primary tw-text-body-m-bold tw-uppercase;
+    }
+
+    &__text {
+      box-sizing: content-box;
+      max-width: var(--text-w);
+      padding: 20px 30px 0 24px;
+    }
+  }
+</style>
