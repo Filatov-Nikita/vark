@@ -6,6 +6,10 @@
   @apply tw-text-h2-extra-bold;
 }
 
+.h3, h3 {
+  @apply tw-text-h3-bold;
+}
+
 .h-mb-50 {
   margin-bottom: 50px;
 }
