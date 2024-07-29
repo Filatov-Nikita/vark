@@ -21,7 +21,7 @@
         </SwiperSlide>
       </Swiper>
       <div class="posts__btn">
-        <BaseButton>ПОСМОТРЕТЬ ВСЕ</BaseButton>
+        <BaseButton :to="{ name: 'posts' }">Посмотреть все</BaseButton>
       </div>
     </div>
   </section>

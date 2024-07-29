@@ -3,22 +3,22 @@ export const privacyHref = '#';
 export default [
   {
     label: 'О компании',
-    to: '#',
+    to: { name: 'about' },
   },
   {
     label: 'Продукция',
-    to: '#',
+    to: { name: 'products' },
   },
   {
     label: 'Документация',
-    to: '#',
+    to: { name: 'docs' },
   },
   {
     label: 'Новости',
-    to: '#',
+    to: { name: 'posts' },
   },
   {
     label: 'Контакты',
-    to: '#',
+    to: { name: 'contacts' },
   },
 ];
