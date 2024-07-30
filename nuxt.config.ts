@@ -19,7 +19,10 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ['./stores/**'],
   },
-  css: ['~/assets/scss/app.scss'],
+  css: [
+    'animate.css/animate.min.css',
+    '~/assets/scss/app.scss'
+  ],
   postcss: {
     plugins: {
       tailwindcss: {},
