@@ -1,19 +1,21 @@
 <template>
-  <Teleport to="body">
-    <Transition :name="`modal-${animDir}`">
-      <div class="modal" v-if="modelValue">
-        <div class="modal__header">
-          <button class="close" @click="close">
-            <BaseIcon name="close" fit />
-          </button>
+  <ClientOnly>
+    <Teleport to="body">
+      <Transition :name="`modal-${animDir}`">
+        <div class="modal" v-if="modelValue">
+          <div class="modal__header">
+            <button class="close" @click="close">
+              <BaseIcon name="close" fit />
+            </button>
+          </div>
+          <div class="modal__body">
+            <slot></slot>
+          </div>
+          <div class="overlay" @click="close"></div>
         </div>
-        <div class="modal__body">
-          <slot></slot>
-        </div>
-        <div class="overlay" @click="close"></div>
-      </div>
-    </Transition>
-  </Teleport>
+      </Transition>
+    </Teleport>
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">
