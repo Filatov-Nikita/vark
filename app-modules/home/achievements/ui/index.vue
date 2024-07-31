@@ -39,7 +39,7 @@
       font-size: 76px;
       line-height: 1.2;
       font-weight: 800;
-      letter-spacing: 1%;
+      letter-spacing: 0.01em;
     }
   }
 </style>

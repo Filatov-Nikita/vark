@@ -62,7 +62,7 @@
       font-size: 92px;
       line-height: 1.25;
       font-weight: 800;
-      letter-spacing: 1%;
+      letter-spacing: 0.01em;
       @apply  tw-text-primary;
 
     }
