@@ -1,5 +1,5 @@
 <template>
-  <section class="politics white-area">
+  <section class="politics gray-area">
     <div class="wrapper">
       <h2 class="h2"><span class="tw-text-primary">Политика</span> компании</h2>
       <p class="subtitle">{{ subtitle }}</p>
@@ -21,6 +21,6 @@
   }
 
   .subtitle {
-    @apply tw-text-h3-bold tw-mb-10 tw-mb-40;
+    @apply tw-text-h3-bold tw-mt-10 tw-mb-40;
   }
 </style>

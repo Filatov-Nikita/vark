@@ -35,12 +35,6 @@
   }>();
 </script>
 
-<style>
-  .prev-el.swiper-button-disabled, .next-el.swiper-button-disabled {
-    opacity: 0.6 !important;
-  }
-</style>
-
 <style scoped lang="scss">
   .slider-wrap {
     padding-top: 32px;
@@ -55,28 +49,6 @@
     border-radius: 20px;
     max-height: calc(100vh - 272px);
     object-fit: contain;
-  }
-
-  %nav {
-    width: 40px;
-    height: 100%;
-    padding: 12px;
-    position: absolute;
-    top: 0;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .prev-el {
-    @extend %nav;
-    left: 0px;
-  }
-
-  .next-el {
-    @extend %nav;
-    right: 0px;
   }
 
   .slide {
