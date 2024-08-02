@@ -16,7 +16,7 @@
 
 <style scoped lang="scss">
   .politics {
-    padding-top: 90px;
+    padding-top: 70px;
     padding-bottom: 70px;
   }
 
