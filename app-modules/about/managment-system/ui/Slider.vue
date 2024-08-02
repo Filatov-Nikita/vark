@@ -1,7 +1,6 @@
 <template>
   <Swiper
     :modules="[ SwiperNavigation ]"
-    :space-between="20"
     :navigation="{
       prevEl: '.prev-el',
       nextEl: '.next-el',
