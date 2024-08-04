@@ -90,6 +90,7 @@
 
   .base-btn {
     border-radius: 20px;
+    display: inline-block;
 
     &:disabled {
       opacity: 0.6 !important;
