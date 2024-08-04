@@ -15,7 +15,11 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@vee-validate/nuxt',
     'nuxt-swiper',
+    'vue-yandex-maps/nuxt',
   ],
+  yandexMaps: {
+    apikey: process.env.YANDEX_MAP_KEY,
+  },
   pinia: {
     storesDirs: ['./stores/**'],
   },
