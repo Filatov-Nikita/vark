@@ -14,10 +14,10 @@
           />
         </template>
         <SwiperSlide>
-          <PostItem :post="post1" />
+          <PostItem class="item" :post="post1" />
         </SwiperSlide>
         <SwiperSlide>
-          <PostItem :post="post1" />
+          <PostItem class="item" :post="post1" />
         </SwiperSlide>
       </Swiper>
       <div class="posts__btn">
@@ -28,7 +28,6 @@
 </template>
 
 <script setup lang="ts">
-  import PostItem from './PostItem.vue';
   import PostImage from './assets/1.jpg';
 
   const post1 = {
@@ -57,5 +56,9 @@
       margin-top: 50px;
       text-align: center;
     }
+  }
+
+  .item :deep(.post__img-wrap) {
+    height: 470px;
   }
 </style>

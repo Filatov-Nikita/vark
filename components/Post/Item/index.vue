@@ -9,21 +9,13 @@
 </template>
 
 <script setup lang="ts">
-  interface Image {
-    width: number,
-    height: number,
-    path: string,
-  }
+  import type { PostListItem } from '@/types/posts/listItem';
 
-  interface Post {
-    image: Image,
-    created_at: string,
-    title: string,
-  }
+  interface Props {
+    post: PostListItem,
+  };
 
-  defineProps<{
-    post: Post,
-  }>();
+  defineProps<Props>();
 </script>
 
 <style scoped lang="scss">
@@ -33,7 +25,7 @@
     &__img-wrap {
       border-radius: 20px;
       overflow: hidden;
-      height: 470px;
+      height: 387px;
     }
 
     &__img {
@@ -50,7 +42,7 @@
     }
 
     &__title {
-      @apply tw-mt-12 tw-text-text-dark tw-text-body-m-regular;
+      @apply tw-mt-12 tw-text-body-m-regular;
     }
   }
 </style>
