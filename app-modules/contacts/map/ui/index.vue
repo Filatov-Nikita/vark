@@ -22,7 +22,8 @@
         :settings="{
           location: {
             center: points[curInd].coords,
-            zoom: 16,
+            zoom: 14,
+            duration: 800,
           },
         }"
         width="100%"
