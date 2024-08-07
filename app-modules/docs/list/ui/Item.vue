@@ -1,9 +1,14 @@
 <template>
-  <article class="item">
+  <article class="item" role="button" @click="showedModal = true">
     <div class="img-wrap">
       <img :width="item.image.width" :height="item.image.height" :src="item.image.path" />
     </div>
     <h2 class="name">{{ item.name }}</h2>
+    <BaseModal class="img-modal" v-model="showedModal">
+      <div class="big-img-wrap">
+        <img class="big-img" :width="item.image.width" :height="item.image.height" :src="item.image.path" />
+      </div>
+    </BaseModal>
   </article>
 </template>
 
@@ -13,6 +18,8 @@
   defineProps<{
     item: TItem,
   }>();
+
+  const showedModal = ref(false);
 </script>
 
 <style scoped lang="scss">
@@ -34,5 +41,26 @@
     img {
       width: 100%;
     }
+  }
+
+  .big-img-wrap {
+    max-width: 500px;
+    margin: 0 auto;
+    height: calc(100vh - 100px);
+  }
+
+  .big-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  :global(.modal.img-modal) {
+    padding: 30px;
+  }
+
+  :global(.img-modal .modal__body) {
+    max-height: calc(100vh - 100px);
   }
 </style>
