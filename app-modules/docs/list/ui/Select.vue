@@ -9,7 +9,7 @@
     <Transition name="select">
       <div class="dropdown" v-if="showed">
         <ul>
-          <li class="option" v-for="option in options" @click="onChange(option)">
+          <li class="option" :class="{ 'option--active': option === modelValue }" v-for="option in options" @click="onChange(option)">
             {{ option }}
           </li>
         </ul>
@@ -49,6 +49,10 @@
     justify-content: space-between;
     gap: 30px;
     @apply tw-text-body-s-regular;
+
+    &:hover {
+      @apply tw-text-text-gray;
+    }
   }
 
   .icon {
@@ -69,23 +73,23 @@
     left: 0;
     width: 100%;
     border-radius: 10px;
-    padding: 12px;
     max-height: 300px;
     overflow-x: hidden;
-    @apply tw-bg-white tw-text-text-dark;
+    @apply tw-bg-white tw-text-text-dark tw-font-medium tw-border tw-border-solid tw-border-text-gray tw-shadow-md;
   }
 
   .option {
-    padding: 4px;
+    padding: 10px 16px;
     border-radius: 4px;
     cursor: pointer;
 
     &:hover {
-      @apply tw-text-text-gray-hover;
+      background: #ececec;
     }
 
-    & + & {
-      margin-top: 8px;
+    &--active {
+      pointer-events: none;
+      @apply tw-text-text-gray;
     }
   }
 
