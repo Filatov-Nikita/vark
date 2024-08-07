@@ -2,7 +2,7 @@
   <ClientOnly>
     <Teleport to="body">
       <Transition :name="`modal-${animDir}`">
-        <div class="modal" v-if="modelValue">
+        <div class="modal" v-bind="$attrs" v-if="modelValue">
           <div class="modal__header">
             <button class="close" @click="close">
               <BaseIcon name="close" fit />
@@ -20,6 +20,10 @@
 
 <script setup lang="ts">
   type AnimDir = 'x' | 'y';
+
+  defineOptions({
+    inheritAttrs: false,
+  });
 
   const props = withDefaults(defineProps<{
     modelValue: boolean,

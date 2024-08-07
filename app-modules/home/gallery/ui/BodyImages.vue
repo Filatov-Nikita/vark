@@ -9,15 +9,14 @@
         <img class="image__img" :width="image.width" :height="image.height" :src="image.path" loading="lazy" />
       </button>
     </div>
-    <Modal :model-value="showedIndex !== null" @update:model-value="showedIndex = null" anim-dir="x" no-off-scroll>
+    <BaseModal :model-value="showedIndex !== null" @update:model-value="showedIndex = null" anim-dir="x" no-off-scroll>
       <BodyImagesSlider v-if="showedIndex !== null" :initial-slide="showedIndex" :images="images" />
-    </Modal>
+    </BaseModal>
   </div>
 </template>
 
 <script setup lang="ts">
   import type { Image } from '../model/types';
-  import Modal from './Modal.vue';
   import BodyImagesSlider from './BodyImagesSlider.vue';
 
   defineProps<{

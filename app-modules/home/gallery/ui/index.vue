@@ -13,9 +13,9 @@
       <div class="gallery__btn" @click="modal = true">
         <BaseButton>Посмотреть все</BaseButton>
       </div>
-      <Modal v-model="modal">
+      <BaseModal v-model="modal">
         <BodyImages v-if="tab === 'photo'" :images="[ image, image ]" />
-      </Modal>
+      </BaseModal>
     </div>
   </section>
 </template>
@@ -24,7 +24,6 @@
   import TabBtn from './TabBtn.vue';
   import SliderImages from './SliderImages.vue';
   import SliderVideos from './SliderVideos.vue';
-  import Modal from './Modal.vue';
   import BodyImages from './BodyImages.vue';
   import Image from './assets/1.jpg';
   import type { Tab } from '../model/types';
