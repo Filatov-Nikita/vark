@@ -20,6 +20,7 @@
     "pinia": "^2.1.7",
     "vite-plugin-svg-icons": "^2.0.1",
     "vue": "latest",
+    "vue-slide-up-down": "^3.0.0",
     "vue-yandex-maps": "^2.1.4",
     "yup-locales": "^1.2.25"
   },
