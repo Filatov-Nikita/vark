@@ -1,0 +1,61 @@
+<template>
+  <section class="slide-item">
+    <div class="slide-item__head" @click="showed = !showed">
+      <h2 class="slide-item__name h3">{{ label }}</h2>
+      <button class="btn-icon" :class="{ 'btn-icon--active': showed }">
+        <BaseIcon name="slide-closed" fit />
+      </button>
+    </div>
+    <SlideUpDown :active="showed" :duration="300">
+      <div class="slide-item__body">
+        <slot></slot>
+      </div>
+    </SlideUpDown>
+  </section>
+</template>
+
+<script setup lang="ts">
+  //@ts-ignore;
+  import SlideUpDown from 'vue-slide-up-down';
+
+  defineProps<{
+    label: string,
+  }>();
+
+  const showed = ref(false);
+</script>
+
+<style scoped lang="scss">
+  .slide-item {
+    border: 1px solid #DEDEDE;
+    border-width: 1px 0;
+    padding: 10px 0;
+
+    &__head {
+      padding: 30px 0;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    &__name {
+      flex-grow: 1;
+    }
+
+    &__body {
+      padding-bottom: 25px;
+    }
+  }
+
+  .btn-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 300ms;
+
+    &--active {
+      transform: rotate(-45deg);
+    }
+  }
+</style>
