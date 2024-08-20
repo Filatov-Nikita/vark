@@ -3,9 +3,9 @@ import type { PostListItem } from './listItem';
 
 export interface PostDetailed {
   id: number,
-  created_at: string,
   title: string,
+  created_at: string,
   image: Image,
   body: string,
-  other_posts: PostListItem[],
+  slug: string,
 };

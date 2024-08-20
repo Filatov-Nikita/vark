@@ -1,9 +1,9 @@
 <template>
   <div class="post">
-    <div class="date">{{ post.created_at }}</div>
+    <div class="date">{{ dt }}</div>
     <h1 class="h3 h-mb-40">{{ post.title }}</h1>
     <div class="img-wrap">
-      <img :width="post.image.width" :height="post.image.height" :src="post.image.path" />
+      <img v-if="post.image" :width="post.image.width" :height="post.image.height" :src="post.image.url" />
     </div>
     <div class="body" v-html="post.body"></div>
   </div>
@@ -12,9 +12,13 @@
 <script setup lang="ts">
   import type { PostDetailed } from '@/types/posts/detailed';
 
-  defineProps<{
+  const props = defineProps<{
     post: PostDetailed,
   }>();
+
+  const dt = computed(() => {
+    return prettyDate(props.post.created_at);
+  });
 </script>
 
 <style scoped lang="scss">
