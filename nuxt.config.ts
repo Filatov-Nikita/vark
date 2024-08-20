@@ -20,6 +20,9 @@ export default defineNuxtConfig({
   yandexMaps: {
     apikey: process.env.YANDEX_MAP_KEY,
   },
+  appConfig: {
+    apiPrefix: process.env.API_PREFIX,
+  },
   pinia: {
     storesDirs: ['./stores/**'],
   },

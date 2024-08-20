@@ -3,6 +3,7 @@
     <div class="wrapper">
       <h2 class="h2 tw-mb-10">Новости</h2>
       <Swiper
+        v-if="posts"
         :space-between="30"
         :slides-per-view="1.7"
         @swiper="onSlider"
@@ -13,11 +14,11 @@
             @next="swiper.slideNext()"
           />
         </template>
-        <SwiperSlide>
-          <PostItem class="item" :post="post1" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <PostItem class="item" :post="post1" />
+        <SwiperSlide
+          v-for="post in posts.data"
+          :key="post.id"
+        >
+          <PostItem class="item" :post="post" />
         </SwiperSlide>
       </Swiper>
       <div class="posts__btn">
@@ -28,17 +29,10 @@
 </template>
 
 <script setup lang="ts">
-  import PostImage from './assets/1.jpg';
+  import type { PostListItem } from '@/types/posts/listItem';
+  import type { DataRes } from '@/types/shared/response';
 
-  const post1 = {
-    image: {
-      width: 1408,
-      height: 940,
-      path: PostImage,
-    },
-    created_at: '2 июня 2024',
-    title: 'ООО «ВАРК» участвовал в выставке «Газ. Нефть. Технологии» в 2024 г. Выставка проходит в ЭКСПО-центре',
-  };
+  const { data: posts } = await useFetch<DataRes<PostListItem[]>>('posts', { baseURL: useAppConfig().apiPrefix, query: { page: 1 } });
 
   const swiper = ref<any>(null);
 

@@ -1,9 +1,9 @@
 <template>
-  <NuxtLink class="post" to="/">
+  <NuxtLink class="post" :to="{ name: 'posts-slug', params: { slug: post.slug } }">
     <div class="post__img-wrap">
-      <img class="post__img" :width="post.image.width" :height="post.image.height" :src="post.image.path" :alt="post.title" />
+      <img v-if="post.thumbnail" class="post__img" :width="post.thumbnail.width" :height="post.thumbnail.height" :src="post.thumbnail.url" :alt="post.title" />
     </div>
-    <div class="post__date">{{ post.created_at }}</div>
+    <div class="post__date">{{ dt }}</div>
     <div class="post__title">{{ post.title }}</div>
   </NuxtLink>
 </template>
@@ -15,7 +15,11 @@
     post: PostListItem,
   };
 
-  defineProps<Props>();
+  const props = defineProps<Props>();
+
+  const dt = computed(() => {
+    return prettyDate(props.post.created_at);
+  });
 </script>
 
 <style scoped lang="scss">
