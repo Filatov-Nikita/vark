@@ -1,25 +1,29 @@
 <template>
   <div>
-    <List :posts="[ post1, post1, post1 ]" />
-    <div class="btn">
-      <BaseButton size="sm">Показать еще</BaseButton>
+    <List v-if="posts" :posts="posts" />
+    <div class="btn" v-if="!isEnd">
+      <BaseButton size="sm" :disabled="loading" @click="loadMore">Показать еще</BaseButton>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
   import List from './List.vue';
-  import PostImage from '@/app-modules/home/posts/ui/assets/1.jpg';
+  import type { PostListItem } from '@/types/posts/listItem';
+  import type { PaginateRes } from '@/types/shared/paginate';
 
-  const post1 = {
-    image: {
-      width: 1408,
-      height: 940,
-      path: PostImage,
-    },
-    created_at: '2 июня 2024',
-    title: 'ООО «ВАРК» участвовал в выставке «Газ. Нефть. Технологии» в 2024 г. Выставка проходит в ЭКСПО-центре',
-  };
+  const { data: posts, isEnd, loading, asyncLoad, loadMore, setPaginate } = usePaginate('posts.', ({ page }) => {
+    return $fetch<PaginateRes<PostListItem[]>>('posts', {
+      baseURL: useAppConfig().apiPrefix,
+      query: { page: page.value },
+    });
+  });
+
+  const res = await asyncLoad();
+
+  if(res.data.value) {
+    setPaginate(res.data.value);
+  }
 </script>
 
 <style scoped lang="scss">
