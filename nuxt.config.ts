@@ -37,6 +37,16 @@ export default defineNuxtConfig({
     },
   },
   vite: {
+    vue: {
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => {
+            const tags = [ 'model-viewer' ];
+            return tags.includes(tag);
+          },
+        },
+      }
+    },
     plugins: [
       createSvgIconsPlugin({
         iconDirs: [ path.resolve(process.cwd(), 'assets/icons') ],
@@ -56,5 +66,6 @@ export default defineNuxtConfig({
   plugins: [
     '~/plugins/icons-sprite.ts',
     '~/plugins/yup-locales.ts',
+    '~/plugins/model-viewer.client.ts',
   ],
 })
