@@ -7,7 +7,7 @@ export default [
   },
   {
     label: 'Продукция',
-    to: { name: 'products' },
+    to: { name: 'products-category-slug', params: { category: 'promyshlennaya-armatura', slug: 'zadvizhki-klinovyie-stalnyie'  } },
   },
   {
     label: 'Документация',
