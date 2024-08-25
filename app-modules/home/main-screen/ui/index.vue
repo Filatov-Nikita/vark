@@ -8,11 +8,15 @@
         <BaseButton design="red-white-xl" @click="scrollForm">Заказать продукцию</BaseButton>
       </div>
     </div>
+    <video ref="video" class="main-screen__video" src="/videos/bg.mp4" :poster="poster" muted loop preload="none"></video>
+    <div class="main-screen__overlay"></div>
   </div>
 </template>
 
 <script setup lang="ts">
+  import { onMounted, ref } from 'vue';
   import Header from '@/app-modules/header/ui/index.vue';
+  import poster from './assets/header.jpg';
 
   const title = 'ПРОИЗВОДСТВО ТРУБОПРОВОДНОЙ АРМАТУРЫ';
   const subtitle = 'Надежность и качество в каждой детали';
@@ -22,15 +26,19 @@
     if(!formEl) return;
     formEl.scrollIntoView({ behavior: 'smooth' });
   }
+
+  const video = ref<HTMLVideoElement | null>(null);
+
+  onMounted(() => {
+    video.value?.play();
+  });
 </script>
 
 <style scoped lang="scss">
   .main-screen {
     padding-top: 30px;
     padding-bottom: 130px;
-    background-image: url('./assets/header.jpg');
-    background-size: cover;
-    background-position: center;
+    position: relative;
 
     &__header {
       margin-bottom: 80px;
@@ -46,6 +54,26 @@
       font-weight: 500;
       font-size: 30px;
       line-height: 1.25;
+    }
+
+    &__video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(0, 0, 0, 0.6);
     }
   }
 </style>
