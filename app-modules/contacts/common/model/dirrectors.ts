@@ -6,28 +6,28 @@ export const genDir = {
 
 export default [
   {
-    name: 'Абдуллин Алик Кувандыкович1',
-    email: 'AbdullinAK@vark.ru1',
+    name: 'Кливенок Денис Александрович',
+    email: 'KlivenokDA@vark.ru',
     position: 'Коммерческий директор',
   },
   {
-    name: 'Абдуллин Алик Кувандыкович2',
-    email: 'AbdullinAK@vark.ru2',
+    name: 'Касимова Елена Гомировна',
+    email: 'KasimovaEG@vark.ru',
     position: 'Финансовый директор',
   },
   {
-    name: 'Абдуллин Алик Кувандыкович3',
-    email: 'AbdullinAK@vark.ru3',
+    name: 'Дроздов Дмитрий Владимирович',
+    email: 'DrozdovDV@vark.ru',
     position: 'Директор производственного департамента',
   },
   {
-    name: 'Абдуллин Алик Кувандыкович4',
-    email: 'AbdullinAK@vark.ru4',
+    name: 'Калинин Андрей Юрьевич',
+    email: 'KalininAY@vark.ru',
     position: 'Директор по развитию',
   },
   {
-    name: 'Абдуллин Алик Кувандыкович5',
-    email: 'AbdullinAK@vark.ru5',
+    name: 'Связев Антон Олегович',
+    email: 'SvyazevAO@vark.ru',
     position: 'Директор по качеству',
   }
 ];

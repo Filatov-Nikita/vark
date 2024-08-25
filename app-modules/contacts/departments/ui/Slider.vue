@@ -8,11 +8,14 @@
         >
           <div class="left">
             <p class="name">{{ customer.name }}</p>
-            <p class="position">{{ customer.position }}</p>
+            <p v-if="customer.position" class="position">{{ customer.position }}</p>
           </div>
           <div class="right">
-            <a class="phone" :href="`tel:${customer.phone}`">{{ customer.phone }}</a>
-            <a class="email" :href="`mmailto:${customer.email}`">{{ customer.email }}</a>
+            <div class="phone">
+              <a :href="`tel:${customer.phone}`">{{ customer.phone }}</a>
+              <span class="phone-cap" v-if="customer.phoneCap">{{ customer.phoneCap }}</span>
+            </div>
+            <a v-if="customer.email" class="email" :href="`mmailto:${customer.email}`">{{ customer.email }}</a>
           </div>
         </li>
       </ul>
@@ -50,33 +53,32 @@
   }
 
   .left {
-    max-width: 342px;
+    max-width: 320px;
     width: 100%;
   }
 
   .right {
-    max-width: 300px;
+    max-width: 250px;
     word-break: break-all;
     text-align: right;
   }
 
-  .name {
-    @apply tw-mb-12;
-  }
-
   .position {
-    @apply tw-text-text-gray;
+    @apply tw-text-text-gray tw-mt-12;
   }
 
   .phone {
-    display: block;
-    width: 100%;
-    @apply tw-mb-12;
+    display: flex;
+    gap: 5px;
+  }
+
+  .phone-cap {
+    @apply tw-text-text-gray;
   }
 
   .email {
     display: block;
     width: 100%;
-    @apply tw-text-text-gray;
+    @apply tw-text-text-gray tw-mt-12;
   }
 </style>
