@@ -21,9 +21,14 @@
 
   const res = await asyncLoad();
 
-  if(res.data.value) {
-    setPaginate(res.data.value);
+  if(res.error.value || !res.data.value) {
+    throw createError({
+      statusCode: res.error.value?.statusCode ?? 500,
+      fatal: true,
+    });
   }
+
+  setPaginate(res.data.value);
 </script>
 
 <style scoped lang="scss">
