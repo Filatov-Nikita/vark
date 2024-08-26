@@ -18,11 +18,14 @@
   //@ts-ignore;
   import SlideUpDown from 'vue-slide-up-down';
 
-  defineProps<{
+  const props = withDefaults(defineProps<{
+    showedInitial?: boolean,
     label: string,
-  }>();
+  }>(), {
+    showedInitial: false,
+  });
 
-  const showed = ref(false);
+  const showed = ref(props.showedInitial);
 </script>
 
 <style scoped lang="scss">
@@ -38,6 +41,12 @@
       display: flex;
       align-items: center;
       gap: 30px;
+      transition: opacity 300ms;
+
+    }
+
+    &__head:hover {
+      opacity: 0.6;
     }
 
     &__name {
