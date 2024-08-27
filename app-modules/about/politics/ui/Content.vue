@@ -74,6 +74,10 @@
     max-width: 1071px;
     @apply tw-text-body-m-regular;
 
+    @include sm {
+      @apply tw-text-body-s-regular;
+    }
+
     & + & {
       margin-top: 22px;
     }
@@ -97,6 +101,11 @@
   .btn {
     margin-top: 40px;
     background: #333333;
+
+    @include sm {
+      margin-top: 30px;
+      width: 100%;
+    }
   }
 
   .extra-text {
@@ -117,6 +126,11 @@
     font-size: 18px;
     line-height: 1.3;
     @apply tw-mt-40;
+
+    @include sm {
+      font-size: 16px;
+      margin-top: 20px;
+    }
   }
 
   .collapse {
@@ -125,5 +139,9 @@
     text-align: left;
     padding: 10px 0;
     @apply tw-text-text-gray tw-mt-20;
+
+    @include sm {
+      margin-top: 10px;
+    }
   }
 </style>

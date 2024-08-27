@@ -18,9 +18,18 @@
   .politics {
     padding-top: 70px;
     padding-bottom: 70px;
+
+    @include sm {
+      padding-top: 35px;
+      padding-bottom: 35px;
+    }
   }
 
   .subtitle {
     @apply tw-text-h3-bold tw-mt-10 tw-mb-40;
+
+    @include sm {
+      @apply tw-text-body-m-bold tw-mb-30;
+    }
   }
 </style>
