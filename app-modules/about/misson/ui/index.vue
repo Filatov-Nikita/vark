@@ -18,12 +18,18 @@
     padding-top: 80px;
     padding-bottom: 120px;
 
+    @include sm {
+      padding-top: 45px;
+      padding-bottom: 70px;
+    }
+
     &__wrap {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       column-gap: 60px;
+      row-gap: 30px;
     }
 
     &__h2 {
