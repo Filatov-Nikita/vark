@@ -10,7 +10,7 @@
       <div class="main-screen__wrap">
         <h1 class="h1">{{ title }}</h1>
         <p class="main-screen__subtitle">{{ subtitle }}</p>
-        <BaseButton design="red-white-xl" @click="scrollForm">Заказать продукцию</BaseButton>
+        <BaseButton class="main-screen__order" design="red-white-xl" @click="scrollForm">Заказать продукцию</BaseButton>
       </div>
     </div>
     <video ref="video" class="main-screen__video" src="/videos/bg.mp4" :poster="poster" muted loop preload="none"></video>
@@ -48,8 +48,15 @@
     padding-bottom: 130px;
     position: relative;
 
+    @include md {
+      padding-bottom: 110px;
+    }
+
     &__header {
       margin-bottom: 80px;
+      @include sm {
+        margin-bottom: 60px;
+      }
     }
 
     &__wrap {
@@ -62,6 +69,26 @@
       font-weight: 500;
       font-size: 30px;
       line-height: 1.25;
+
+      @include md {
+        font-size: 28px;
+      }
+
+      @include sm {
+        margin-bottom: 40px;
+        margin-top: 15px;
+        font-size: 20px;
+      }
+
+      @include xs {
+        font-size: 18px;
+      }
+    }
+
+    &__order {
+      @include sm {
+        width: 100%;
+      }
     }
 
     &__video {

@@ -30,6 +30,10 @@
     background: linear-gradient(134deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.14) 100%);
     border-radius: 20px;
 
+    @include sm {
+      border-radius: 12px;
+    }
+
     &__wrap {
       display: flex;
       flex-wrap: wrap;
@@ -37,10 +41,18 @@
       justify-content: space-between;
       padding: 15px 30px;
       padding-right: 35px;
+
+      @include sm {
+        padding: 12px 16px;
+      }
     }
 
     &__logo {
       width: 117px;
+
+      @include sm {
+        width: 95px;
+      }
     }
 
     &__nav {

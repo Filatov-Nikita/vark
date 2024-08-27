@@ -1,6 +1,7 @@
 $lg: 1259.9px;
 $md: 959.9px;
 $sm: 719.9px;
+$xs: 374px;
 
 @mixin screen($size) {
   @media screen and (max-width: $size) {
@@ -22,6 +23,12 @@ $sm: 719.9px;
 
 @mixin sm() {
   @include screen($sm) {
+    @content;
+  }
+}
+
+@mixin xs() {
+  @include screen($xs) {
     @content;
   }
 }

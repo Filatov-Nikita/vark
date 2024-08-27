@@ -14,5 +14,10 @@
   .toggle {
     width: 38px;
     height: 38px;
+
+    @include sm {
+      width: 24px;
+      height: 24px;
+    }
   }
 </style>
