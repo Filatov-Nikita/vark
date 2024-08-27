@@ -1,15 +1,21 @@
 <template>
   <section class="posts white-area">
     <div class="wrapper">
-      <h2 class="h2 tw-mb-10">Новости</h2>
+      <h2 class="h2 title">Новости</h2>
       <Swiper
         v-if="posts"
-        :space-between="30"
-        :slides-per-view="1.7"
+        :space-between="10"
+        :slides-per-view="1.1"
+        :breakpoints="{
+          720: {
+            'spaceBetween': 30,
+            'slidesPerView': 1.7,
+          }
+        }"
         @swiper="onSlider"
       >
         <template v-slot:container-start>
-          <SwiperNav class="tw-mb-12 tw-justify-end"
+          <SwiperNav class="posts__nav tw-mb-12 tw-justify-end"
             @prev="swiper.slidePrev()"
             @next="swiper.slideNext()"
           />
@@ -21,8 +27,8 @@
           <PostItem class="item" :post="post" />
         </SwiperSlide>
       </Swiper>
-      <div class="posts__btn">
-        <BaseButton :to="{ name: 'posts' }">Посмотреть все</BaseButton>
+      <div class="posts__btn-wrap">
+        <BaseButton class="posts__btn" :to="{ name: 'posts' }">Посмотреть все</BaseButton>
       </div>
     </div>
   </section>
@@ -46,13 +52,46 @@
     padding-top: 80px;
     padding-bottom: 120px;
 
-    &__btn {
+    @include sm {
+      padding-top: 35px;
+      padding-bottom: 70px;
+    }
+
+    &__btn-wrap {
       margin-top: 50px;
       text-align: center;
+
+      @include sm {
+        margin-top: 40px;
+      }
+    }
+
+    &__btn {
+      @include sm {
+        width: 100%;
+      }
+    }
+
+    &__nav {
+      @include sm {
+        display: none;
+      }
     }
   }
 
   .item :deep(.post__img-wrap) {
     height: 470px;
+
+    @include sm {
+      height: 230px;
+    }
+  }
+
+  .title {
+    @apply tw-mb-10;
+
+    @include sm {
+      @apply tw-mb-20;
+    }
   }
 </style>

@@ -43,10 +43,19 @@
       font-size: 16px;
       line-height: 1.25;
       @apply tw-mt-20 tw-text-text-gray;
+
+      @include sm {
+        font-size: 14px;
+        margin-top: 14px;
+      }
     }
 
     &__title {
       @apply tw-mt-12 tw-text-body-m-regular;
+
+      @include sm {
+        @apply tw-mt-10 tw-text-body-s-regular;
+      }
     }
   }
 </style>
