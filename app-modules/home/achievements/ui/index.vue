@@ -20,19 +20,36 @@
     padding-top: 100px;
     padding-bottom: 70px;
 
+    @include sm {
+      padding-top: 50px;
+      padding-bottom: 45px;
+    }
+
     &__wrap {
       display: flex;
       flex-wrap: wrap;
       column-gap: 120px;
       row-gap: 60px;
+
+      @include sm {
+        row-gap: 30px;
+      }
     }
   }
 
   .achive-item {
     @apply tw-text-white;
 
+    @include sm {
+      width: 100%;
+    }
+
     &__label {
       @apply tw-text-body-m-regular tw-mt-2;
+
+      @include sm {
+        @apply tw-text-body-s-regular;
+      }
     }
 
     &__value {
@@ -40,6 +57,10 @@
       line-height: 1.2;
       font-weight: 800;
       letter-spacing: 0.01em;
+
+      @include xs {
+        font-size: 50px;
+      }
     }
   }
 </style>
