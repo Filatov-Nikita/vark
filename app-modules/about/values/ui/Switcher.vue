@@ -45,16 +45,41 @@
     display: flex;
     flex-wrap: wrap;
     column-gap: 60px;
+    row-gap: 45px;
+
+    @include lg {
+      column-gap: 50px;
+    }
+
+    @include md {
+      justify-content: center;
+    }
   }
 
   .left {
     max-width: 500px;
     width: 100%;
+
+    @include lg {
+      max-width: 400px;
+    }
+
+    @include md {
+      max-width: 100%;
+    }
   }
 
   .right {
     max-width: 638px;
     width: 100%;
+
+    @include lg {
+      max-width: 475px;
+    }
+
+    @include md {
+      max-width: 100%;
+    }
   }
 
   .item {

@@ -7,7 +7,7 @@
       @mousemove="$emit('change:active', index)"
     >
       <span>0{{ index + 1 }}</span>
-      <span>{{ tab }}</span>
+      <span v-html="tab"></span>
     </button>
   </aside>
 </template>
@@ -24,8 +24,8 @@
   const tabs = [
     'Наши клиенты',
     'Наши сотрудники',
-    'Эффективность и качество',
-    'Технологии и инновации',
+    'Эффективность и&nbsp;качество',
+    'Технологии и&nbsp;инновации',
   ];
 </script>
 
@@ -39,6 +39,17 @@
     font-size: 24px;
     line-height: 1.25;
     @apply tw-uppercase tw-text-left tw-w-full tw-text-text-gray tw-border-b-2 tw-border-solid tw-border-text-gray;
+
+    @include lg {
+      padding: 32px 0;
+      gap: 40px;
+    }
+
+    @include sm {
+      padding: 24px 0;
+      gap: 24px;
+      font-size: 18px;
+    }
 
     &--active {
       font-weight: 700;

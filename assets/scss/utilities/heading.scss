@@ -26,6 +26,11 @@
 
 .h3, h3 {
   @apply tw-text-h3-bold;
+
+  @include sm {
+    font-size: 18px;
+    line-height: 1.3;
+  }
 }
 
 .h-mb-40 {
@@ -38,6 +43,10 @@
 
 .h-mb-50 {
   margin-bottom: 50px;
+
+  @include sm {
+    margin-bottom: 30px;
+  }
 }
 
 .h-mb-60 {
