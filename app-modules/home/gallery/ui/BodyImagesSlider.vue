@@ -2,18 +2,23 @@
   <div class="slider-wrap">
     <Swiper
       class="slider"
-      :modules="[ SwiperNavigation ]"
       :initial-slide="initialSlide"
-      :space-between="40"
-      :navigation="{
-        prevEl: '.prev-el',
-        nextEl: '.next-el',
+      :space-between="20"
+      :breakpoints="{
+        720: {
+          'spaceBetween': 40,
+          'navigation': {
+            nextEl: '.next-el',
+            prevEl: '.prev-el',
+          },
+          modules: [ SwiperNavigation ],
+        }
       }"
     >
-      <button class="prev-el">
+      <button class="prev-el sl-btn">
         <BaseIcon name="prev" fit />
       </button>
-      <button class="next-el">
+      <button class="next-el sl-btn">
         <BaseIcon name="next" fit />
       </button>
       <SwiperSlide
@@ -53,5 +58,15 @@
 
   .slide {
     padding: 0 60px;
+
+    @include sm {
+      padding: 0px;
+    }
+  }
+
+  .sl-btn {
+    @include sm {
+      display: none;
+    }
   }
 </style>

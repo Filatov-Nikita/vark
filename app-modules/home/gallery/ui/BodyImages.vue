@@ -30,6 +30,11 @@
   .wrap {
     padding: 10px;
     padding-top: 32px;
+
+    @include sm {
+      padding: 0px;
+      padding-top: 24px;
+    }
   }
 
   .images {
@@ -43,5 +48,17 @@
     margin: 10px;
     border-radius: 20px;
     overflow: hidden;
+
+    @include lg {
+      width: calc(100% / 12 * 4 - 20px);
+    }
+
+    @include md {
+      width: calc(50% - 20px);
+    }
+
+    @include sm {
+      width: calc(100% - 20px);
+    }
   }
 </style>

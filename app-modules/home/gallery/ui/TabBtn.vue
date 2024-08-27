@@ -18,6 +18,11 @@
     border-radius: 20px;
     @apply tw-text-body-m-regular;
 
+    @include sm {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
     &--active {
       background-color: #333333 !important;
       border-color: #333333 !important;

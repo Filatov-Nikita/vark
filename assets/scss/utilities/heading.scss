@@ -30,6 +30,10 @@
 
 .h-mb-40 {
   margin-bottom: 40px;
+
+  @include sm {
+    margin-bottom: 24px;
+  }
 }
 
 .h-mb-50 {

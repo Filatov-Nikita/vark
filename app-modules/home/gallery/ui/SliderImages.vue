@@ -1,13 +1,20 @@
 <template>
   <Swiper
-    :space-between="20"
-    :slides-per-group="2"
-    :slides-per-view="2"
-    :height="392"
+    :space-between="10"
+    :slides-per-view="1.1"
+    :height="330"
+    :breakpoints="{
+      720: {
+        'spaceBetween': 20,
+        'slidesPerGroup': 2,
+        'slidesPerView': 2,
+        'height': 392,
+      }
+    }"
     @swiper="swiper = $event"
   >
     <template v-slot:container-start>
-      <SwiperNav class="tw-justify-end tw-mb-8" @prev="swiper.slidePrev()" @next="swiper.slideNext()" />
+      <SwiperNav class="tw-justify-end tw-mb-8 sw-nav" @prev="swiper.slidePrev()" @next="swiper.slideNext()" />
     </template>
     <SwiperSlide
       v-for="image in images"
@@ -26,3 +33,11 @@
 
   const swiper = ref<any>(null);
 </script>
+
+<style scoped lang="scss">
+  .sw-nav {
+    @include sm {
+      display: none;
+    }
+  }
+</style>

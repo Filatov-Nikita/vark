@@ -53,6 +53,14 @@
     top: 0;
     padding-top: 80px;
 
+    @include md {
+      padding: 40px;
+    }
+
+    @include sm {
+      padding: 16px;
+    }
+
     &-y-enter-active {
       animation: fadeInDown;
       animation-duration: 300ms;
@@ -80,6 +88,14 @@
     &__body {
       max-height: calc(100vh - 240px);
       overflow-x: hidden;
+
+      @include md {
+        max-height: calc(100vh - 120px);
+      }
+
+      @include sm {
+        max-height: calc(100vh - 72px);
+      }
     }
   }
 
