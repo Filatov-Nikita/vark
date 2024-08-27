@@ -18,15 +18,27 @@
     &__inp {
       & + & {
         margin-top: 25px;
+
+        @include sm {
+          margin-top: 12px;
+        }
       }
     }
 
     &__policy {
       margin-top: 20px;
+
+      @include sm {
+        margin-top: 14px;
+      }
     }
 
     &__btn {
       margin-top: 30px;
+
+      @include sm {
+        width: 100%;
+      }
     }
   }
 </style>

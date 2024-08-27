@@ -79,6 +79,11 @@
     font-size: 20px;
     line-height: 25px;
     font-weight: 700;
+
+    @include sm {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   %size-md {
