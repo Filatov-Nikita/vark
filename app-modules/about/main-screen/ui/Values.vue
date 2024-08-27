@@ -32,17 +32,30 @@
     display: flex;
     flex-wrap: wrap;
     margin: -10px;
+
+    @include md {
+      margin: -8px;
+    }
   }
 
   .col1 {
     width: calc(100% / 12 * 8 - 20px);
     margin: 10px;
+
+    @include md {
+      margin: 8px;
+      width: calc(100% - 16px);
+    }
   }
 
   .col1-wrap {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+
+    @include md {
+      gap: 16px;
+    }
   }
 
   .clients-square {
@@ -52,8 +65,17 @@
     flex-direction: column;
     justify-content: center;
 
+    @include md {
+      margin: 8px;
+      width: calc(100% - 16px);
+    }
+
     .label {
       margin-bottom: 30px;
+
+      @include md {
+        margin-bottom: 0px;
+      }
     }
   }
 
@@ -74,13 +96,46 @@
     background: #2B2B2B;
     padding: 30px 16px;
     padding-left: 45px;
+    transition: background-color 200ms;
+
+    @include md {
+      padding-left: 24px;
+    }
+
+    @include sm {
+      padding: 16px;
+    }
+
+    &:hover {
+      @apply tw-bg-primary;
+    }
+
+    &:hover .label {
+      @apply tw-text-white;
+    }
 
     &.clients-square {
       padding-left: 32px;
+
+      @include md {
+        padding-left: 24px;
+      }
+
+      @include sm {
+        padding-left: 16px;
+      }
     }
 
     &.produce-square {
       padding-left: 40px;
+
+      @include md {
+        padding-left: 24px;
+      }
+
+      @include sm {
+        padding-left: 16px;
+      }
     }
   }
 
@@ -89,6 +144,22 @@
     line-height: 1.2;
     font-weight: 800;
     letter-spacing: 0.03em;
+
+    @include lg {
+      font-size: 70px;
+    }
+
+    @include md {
+      font-size: 54px;
+    }
+
+    @include sm {
+      font-size: 40px;
+    }
+
+    @include xs {
+      font-size: 32px;
+    }
   }
 
   .label {
@@ -97,6 +168,14 @@
     line-height: 1.2;
     @apply tw-text-text-gray;
 
+    @include sm {
+      font-size: 16px;
+    }
+
+    @include xs {
+      font-size: 14px;
+    }
+
     &--right {
       text-align: right;
     }
@@ -104,5 +183,17 @@
 
   .m2 {
     font-size: 50px;
+
+    @include md {
+      font-size: 46px
+    }
+
+    @include sm {
+      font-size: 32px;
+    }
+
+    @include xs {
+      font-size: 24px;
+    }
   }
 </style>

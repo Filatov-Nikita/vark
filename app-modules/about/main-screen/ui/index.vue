@@ -18,11 +18,21 @@
   .about {
     padding-bottom: 90px;
 
+    @include sm {
+      padding-bottom: 35px;
+    }
+
     &__description {
       max-width: 813px;
       margin-top: 30px;
       margin-bottom: 60px;
       @apply tw-text-body-m-regular;
+
+      @include sm {
+        margin-top: 20px;
+        margin-bottom: 50px;
+        @apply tw-text-body-s-regular;
+      }
     }
   }
 </style>
