@@ -4,6 +4,7 @@
       <Logo class="header__logo" />
       <Nav class="header__nav" />
       <Phone class="header__phone" />
+      <MenuToggle class="header__burger" :showed="showedMenu" @click="$emit('update:showedMenu', !showedMenu)" />
     </div>
   </header>
 </template>
@@ -12,6 +13,15 @@
   import Logo from './Logo.vue';
   import Nav from './Nav.vue';
   import Phone from './Phone.vue';
+  import MenuToggle from './MenuToggle.vue';
+
+  defineProps<{
+    showedMenu: boolean,
+  }>();
+
+  defineEmits<{
+    (event: 'update:showedMenu', value: boolean): void,
+  }>();
 </script>
 
 <style scoped lang="scss">
@@ -31,6 +41,25 @@
 
     &__logo {
       width: 117px;
+    }
+
+    &__nav {
+      @include lg {
+        display: none;
+      }
+    }
+
+    &__phone {
+      @include lg {
+        display: none;
+      }
+    }
+
+    &__burger {
+      display: none;
+      @include lg {
+        display: block;
+      }
     }
   }
 </style>

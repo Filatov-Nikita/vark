@@ -1,7 +1,12 @@
 <template>
   <div class="main-screen">
     <div class="wrapper">
-      <Header class="main-screen__header" />
+      <Header class="main-screen__header" v-model:showedMenu="showedMenuSm" />
+      <MenuSm :showed="showedMenuSm" @close="showedMenuSm = false">
+        <template #header>
+          <Header v-model:showedMenu="showedMenuSm" />
+        </template>
+      </MenuSm>
       <div class="main-screen__wrap">
         <h1 class="h1">{{ title }}</h1>
         <p class="main-screen__subtitle">{{ subtitle }}</p>
@@ -16,7 +21,10 @@
 <script setup lang="ts">
   import { onMounted, ref } from 'vue';
   import Header from '@/app-modules/header/ui/index.vue';
+  import MenuSm from '@/app-modules/header/ui/MenuSm.vue';
   import poster from './assets/header.jpg';
+
+  const showedMenuSm = ref(false);
 
   const title = 'ПРОИЗВОДСТВО ТРУБОПРОВОДНОЙ АРМАТУРЫ';
   const subtitle = 'Надежность и качество в каждой детали';
