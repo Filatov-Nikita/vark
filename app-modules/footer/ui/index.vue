@@ -29,8 +29,18 @@
     padding-bottom: 74px;
     @apply tw-bg-bg-grafit;
 
+    @include sm {
+      padding-bottom: 48px;
+    }
+
     &__org-name {
       @apply tw-text-h3-bold tw-mb-30;
+
+      @include sm {
+        font-size: 20px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+      }
     }
 
     &__wrap {
@@ -44,6 +54,10 @@
       column-gap: 80px;
       row-gap: 40px;
       margin-bottom: 60px;
+
+      @include sm {
+        margin-bottom: 40px;
+      }
     }
 
     &__nav {

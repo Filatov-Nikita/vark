@@ -20,9 +20,15 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    column-gap: 50px;
+    row-gap: 20px;
 
     &__link {
       @apply tw-text-text-gray;
+
+      @include sm {
+        font-size: 14px;
+      }
 
       &:hover {
         @apply tw-text-white tw-underline;
@@ -35,6 +41,10 @@
     align-items: center;
     gap: 14px;
     @apply tw-text-text-gray;
+
+    @include sm {
+      font-size: 14px;
+    }
 
     &__logo {
       width: 110px;

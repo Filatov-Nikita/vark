@@ -23,11 +23,19 @@
     &__row {
       & + & {
         @apply tw-mt-16;
+
+        @include sm {
+          margin-top: 14px;
+        }
       }
     }
 
     &__link {
       @apply tw-text-body-m-regular;
+
+      @include sm {
+        @apply tw-text-body-s-regular;
+      }
 
       &:hover {
         @apply tw-text-text-gray-hover;

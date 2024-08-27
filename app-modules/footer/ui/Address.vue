@@ -23,14 +23,26 @@
     &__label {
       margin-bottom: 5px;
       @apply tw-text-text-gray;
+
+      @include sm {
+        font-size: 14px;
+      }
     }
 
     &__body {
       @apply tw-text-body-m-regular;
+
+      @include sm {
+        @apply tw-text-body-s-regular;
+      }
     }
 
     & + & {
       @apply tw-mt-30;
+
+      @include sm {
+        @apply tw-mt-24;
+      }
     }
   }
 </style>
