@@ -88,6 +88,10 @@
     padding: 20px 24px 40px;
     @apply tw-text-body-m-regular tw-text-white;
 
+    @include sm {
+      padding: 16px 12px 32px;
+    }
+
     &__img-wrap {
       margin-bottom: 20px;
     }

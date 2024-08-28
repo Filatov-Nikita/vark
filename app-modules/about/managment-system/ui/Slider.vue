@@ -1,15 +1,21 @@
 <template>
   <Swiper
+    :spaceBetween="10"
     :modules="[ SwiperNavigation ]"
-    :navigation="{
-      prevEl: '.prev-el',
-      nextEl: '.next-el',
+    :breakpoints="{
+      720: {
+        'spaceBetween': 0,
+        'navigation': {
+          prevEl: '.prev-el',
+          nextEl: '.next-el',
+        },
+      }
     }"
   >
-    <button class="prev-el">
+    <button class="prev-el sw-nav">
       <BaseIcon name="prev" fit colorHex="#C6C6C6" />
     </button>
-    <button class="next-el">
+    <button class="next-el sw-nav">
       <BaseIcon name="next" fit colorHex="#C6C6C6" />
     </button>
     <SwiperSlide class="slide">
@@ -43,5 +49,15 @@
 
   .slide {
     padding: 0 48px;
+
+    @include sm {
+      padding: 0px;
+    }
+  }
+
+  .sw-nav {
+    @include sm {
+      display: none;
+    }
   }
 </style>

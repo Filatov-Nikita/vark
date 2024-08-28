@@ -4,6 +4,7 @@
       class="slider"
       :initial-slide="initialSlide"
       :space-between="20"
+      :modules="[ SwiperNavigation ]"
       :breakpoints="{
         720: {
           'spaceBetween': 40,
@@ -11,7 +12,6 @@
             nextEl: '.next-el',
             prevEl: '.prev-el',
           },
-          modules: [ SwiperNavigation ],
         }
       }"
     >
