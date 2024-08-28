@@ -22,16 +22,29 @@
   .form {
     border-radius: 20px;
     padding: 24px 50px;
+
+    @include sm {
+      padding: 16px 12px 24px;
+    }
   }
 
   .subtitle {
     max-width: 365px;
     @apply tw-text-body-m-regular tw-mt-10 tw-mb-16;
+
+    @include sm {
+      max-width: 320px;
+      @apply tw-text-body-s-regular tw-mt-8 tw-mb-20;
+    }
   }
 
   .inp {
     & + & {
       margin-top: 8px;
+
+      @include sm {
+        margin-top: 12px;
+      }
     }
   }
 
@@ -44,5 +57,9 @@
     line-height: 1.25;
     margin-top: 14px;
     margin-bottom: 12px;
+
+    @include sm {
+      width: 100%;
+    }
   }
 </style>
