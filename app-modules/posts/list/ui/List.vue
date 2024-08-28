@@ -32,10 +32,24 @@
     display: flex;
     flex-wrap: wrap;
     margin: -30px -20px;
+
+    @include md {
+      margin: -15px;
+    }
   }
 
   .item {
     margin: 30px 20px;
     width: calc(50% - 40px);
+
+    @include md {
+      margin: 15px;
+      width: calc(50% - 30px);
+    }
+
+    @include sm {
+      margin: 15px;
+      width: calc(100% - 30px);
+    }
   }
 </style>

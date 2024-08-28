@@ -25,21 +25,37 @@
   .post {
     max-width: 900px;
     padding-bottom: 70px;
+
+    @include sm {
+      padding-bottom: 35px;
+    }
   }
 
   .date {
     @apply tw-text-body-m-regular tw-text-text-gray tw-mb-16;
+
+    @include sm {
+      @apply tw-text-body-s-regular tw-mt-12;
+    }
   }
 
   .img-wrap {
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 30px;
+
+    @include sm {
+      margin-bottom: 20px;
+    }
   }
 
   .body {
     font-size: 18px;
     line-height: 1.4;
+
+    @include sm {
+      font-size: 16px;
+    }
 
     :deep(p + p) {
       margin-top: 20px;

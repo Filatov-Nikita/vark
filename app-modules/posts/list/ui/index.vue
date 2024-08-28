@@ -1,8 +1,8 @@
 <template>
   <div>
     <List v-if="posts" :posts="posts" />
-    <div class="btn" v-if="!isEnd">
-      <BaseButton size="sm" :disabled="loading" @click="loadMore">Показать еще</BaseButton>
+    <div class="btn-wrap" v-if="!isEnd">
+      <BaseButton class="btn" size="sm" :disabled="loading" @click="loadMore">Показать еще</BaseButton>
     </div>
   </div>
 </template>
@@ -32,8 +32,18 @@
 </script>
 
 <style scoped lang="scss">
-  .btn {
+  .btn-wrap {
     margin-top: 60px;
     @apply tw-text-center;
+
+    @include sm {
+      margin-top: 50px;
+    }
+  }
+
+  .btn {
+    @include sm {
+      width: 100%;
+    }
   }
 </style>

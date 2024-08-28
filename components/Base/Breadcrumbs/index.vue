@@ -23,10 +23,12 @@
 <style scoped lang="scss">
   .base-breadcrumbs {
     width: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
     @apply tw-text-text-gray;
+
+    @include sm {
+      font-size: 14px;
+      line-height: 17px;
+    }
 
     &__last {
       @apply tw-pointer-events-none;

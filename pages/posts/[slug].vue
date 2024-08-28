@@ -43,9 +43,25 @@
 <style scoped lang="scss">
   .post-one {
     padding-top: 75px;
+
+    @include md {
+      padding-top: 40px;
+    }
+
+    @include sm {
+      margin-bottom: 30px;
+    }
   }
 
   .bread {
     margin-bottom: 60px;
+
+    @include md {
+      margin-bottom: 50px;
+    }
+
+    @include sm {
+      margin-bottom: 40px;
+    }
   }
 </style>
