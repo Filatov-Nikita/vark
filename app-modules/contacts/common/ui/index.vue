@@ -67,20 +67,38 @@
 <style scoped lang="scss">
   .common {
     padding-top: 50px;
+
+    @include sm {
+      padding-top: 30px;
+    }
   }
 
   .label {
     @apply tw-text-text-gray tw-mb-10;
+
+    @include sm {
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 6px;
+    }
   }
 
   .address {
     max-width: 391px;
     @apply tw-text-body-m-regular;
+
+    @include sm {
+      @apply tw-text-body-s-regular;
+    }
   }
 
   .item {
     & + & {
       @apply tw-mt-30;
+
+      @include sm {
+        @apply tw-mt-24;
+      }
     }
   }
 
@@ -89,18 +107,29 @@
     display: flex;
     flex-wrap: wrap;
     column-gap: 60px;
+    row-gap: 24px;
     justify-content: space-between;
     margin-bottom: 100px;
+
+    @include sm {
+      margin-bottom: 70px;
+    }
   }
 
   .link {
     @apply tw-text-body-m-extra-bold tw-text-white tw-inline-block;
+
+    @include sm {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   .phone-email {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 24px;
   }
 
   .dirs {
@@ -111,30 +140,56 @@
     display: flex;
     flex-wrap: wrap;
     column-gap: 60px;
+    row-gap: 12px;
     justify-content: space-between;
     margin-bottom: 50px;
+
+    @include sm {
+      margin-bottom: 40px;
+    }
   }
 
   .gen-dir-label {
     @apply tw-text-h3-bold;
+
+    @include sm {
+      font-size: 20px;
+      line-height: 27px;
+    }
   }
 
   .name {
     @apply tw-text-body-m-regular tw-mb-8;
+
+    @include sm {
+      @apply tw-text-body-s-regular;
+    }
   }
 
   .email {
     @apply tw-text-text-gray tw-text-body-m-regular tw-inline-block;
+
+    @include sm {
+      @apply tw-text-body-s-regular;
+    }
   }
 
   .dir-li {
     & + & {
       margin-top: 20px;
+
+      @include sm {
+        margin-top: 14px;
+      }
     }
   }
 
   .dir-tab {
     @apply tw-text-body-m-regular tw-text-text-gray tw-text-left;
+
+    @include sm {
+      @apply tw-text-body-s-regular;
+    }
 
     &--active {
       @apply tw-font-semibold tw-text-white;
@@ -145,6 +200,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 24px;
   }
 
   .dir-value {

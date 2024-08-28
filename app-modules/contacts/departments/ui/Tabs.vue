@@ -35,11 +35,20 @@
   .tab-li {
     & + & {
       margin-top: 30px;
+
+      @include sm {
+        margin-top: 12px;
+      }
     }
   }
 
   .tab {
     @apply tw-text-text-gray tw-text-body-m-regular tw-text-left;
+
+    @include sm {
+      font-size: 14px;
+      line-height: 17px;
+    }
 
     &--active {
       @apply tw-text-white tw-font-bold;

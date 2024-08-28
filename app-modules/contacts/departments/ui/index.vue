@@ -20,7 +20,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     column-gap: 40px;
+    row-gap: 30px;
     padding-top: 37px;
+
+    @include sm {
+      padding-top: 30px;
+    }
   }
 
   .slider {

@@ -44,8 +44,14 @@
     display: flex;
     flex-wrap: wrap;
     column-gap: 30px;
+    row-gap: 20px;
     justify-content: space-between;
     @apply tw-text-body-m-regular;
+
+    @include sm {
+      padding: 20px 0px;
+      @apply tw-text-body-s-regular;
+    }
 
     &:first-child {
       padding-top: 0;
@@ -55,16 +61,29 @@
   .left {
     max-width: 320px;
     width: 100%;
+
+    @include sm {
+      max-width: 100%;
+    }
   }
 
   .right {
     max-width: 250px;
     word-break: break-all;
     text-align: right;
+
+    @include sm {
+      max-width: 100%;
+      text-align: left;
+    }
   }
 
   .position {
     @apply tw-text-text-gray tw-mt-12;
+
+    @include sm {
+      margin-top: 4px;
+    }
   }
 
   .phone {
@@ -80,5 +99,9 @@
     display: block;
     width: 100%;
     @apply tw-text-text-gray tw-mt-12;
+
+    @include sm {
+      margin-top: 4px;
+    }
   }
 </style>

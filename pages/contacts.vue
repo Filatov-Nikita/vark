@@ -26,6 +26,10 @@
     border-bottom-width: 1px;
     border-color: #5D5D5D;
 
+    @include sm {
+      max-width: 300px;
+    }
+
     :deep(.tab-item) {
       padding-bottom: 16px;
       font-weight: 400;
@@ -53,5 +57,9 @@
 
   .ya-map {
     margin-top: 100px;
+
+    @include sm {
+      margin-top: 70px;
+    }
   }
 </style>
