@@ -34,6 +34,10 @@
 
     &__header {
       @apply tw-pt-30;
+
+      @include sm {
+        @apply tw-pt-16;
+      }
     }
   }
 </style>

@@ -48,7 +48,7 @@
     z-index: 9000;
     left: 0;
     top: 0;
-    padding-top: 30px;
+    padding-top: 16px;
     @apply tw-bg-bg-grafit;
   }
 

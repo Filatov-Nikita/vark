@@ -1,11 +1,11 @@
 <template>
   <div>
     <Tabs class="tabs" :items="docTypes" v-model:activeTab="tab" />
-    <Swiper :initialSlide="tab" @swiper="swiper = $event">
+    <Swiper :initialSlide="tab" :allowTouchMove="false" @swiper="swiper = $event">
       <SwiperSlide
-        v-for="cat in catList"
+        v-for="(cat, index) in catList"
       >
-        <ProductListWrap v-if="tab === 0" :items="cat.items" v-slot="{ filtredItems }">
+        <ProductListWrap v-if="index === 0" :items="cat.items" v-slot="{ filtredItems }">
           <List :items="filtredItems" />
         </ProductListWrap>
         <List
@@ -36,5 +36,9 @@
 <style scoped lang="scss">
   .tabs {
     margin-bottom: 40px;
+
+    @include sm {
+      margin-bottom: 20px;
+    }
   }
 </style>

@@ -55,4 +55,8 @@
 
 .h-mb-60 {
   margin-bottom: 60px;
+
+  @include sm {
+    margin-bottom: 30px;
+  }
 }

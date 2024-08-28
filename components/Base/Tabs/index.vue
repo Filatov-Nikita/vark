@@ -36,6 +36,12 @@
     padding-bottom: 20px;
     @apply tw-text-h3-bold tw-uppercase;
 
+    @include sm {
+      padding-bottom: 12px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
     &--active {
       @apply tw-text-text-dark;
 

@@ -29,7 +29,7 @@ export const catList: CatItem[] = [
         image: {
           width: 100,
           height: 100,
-          path: doc1,
+          url: doc1,
         },
         productType: productTypes['zadvij_klin_stal'],
       },
@@ -43,7 +43,7 @@ export const catList: CatItem[] = [
         image: {
           width: 100,
           height: 100,
-          path: doc1,
+          url: doc1,
         },
         productType: productTypes['zadvij_klin_stal'],
       },

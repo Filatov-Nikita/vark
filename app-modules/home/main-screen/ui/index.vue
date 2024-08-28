@@ -52,6 +52,10 @@
       padding-bottom: 110px;
     }
 
+    @include sm {
+      padding-top: 16px;
+    }
+
     &__header {
       margin-bottom: 80px;
       @include sm {

@@ -28,5 +28,10 @@
   .p-select {
     max-width: 340px;
     margin-bottom: 18px;
+
+    @include sm {
+      max-width: 100%;
+      margin-bottom: 16px;
+    }
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="tw-overflow-y-hidden">
     <div class="items">
       <button
         class="item"
@@ -28,12 +28,23 @@
   .items {
     display: flex;
     gap: 30px;
+
+    @include sm {
+      gap: 16px;
+    }
   }
 
   .item {
     padding: 14px 30px;
     border-radius: 20px;
+    flex-shrink: 0;
     @apply tw-border tw-border-solid tw-border-text-gray tw-text-body-m-regular tw-text-text-gray;
+
+    @include sm {
+      padding: 16px;
+      font-size: 14px;
+      line-height: 17px;
+    }
 
     &--active {
       @apply tw-bg-white tw-text-text-dark tw-border-white;

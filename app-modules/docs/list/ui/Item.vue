@@ -1,12 +1,12 @@
 <template>
   <article class="item" role="button" @click="showedModal = true">
     <div class="img-wrap">
-      <img :width="item.image.width" :height="item.image.height" :src="item.image.path" />
+      <img :width="item.image.width" :height="item.image.height" :src="item.image.url" />
     </div>
     <h2 class="name">{{ item.name }}</h2>
     <BaseModal class="img-modal" v-model="showedModal">
       <div class="big-img-wrap">
-        <img class="big-img" :width="item.image.width" :height="item.image.height" :src="item.image.path" />
+        <img class="big-img" :width="item.image.width" :height="item.image.height" :src="item.image.url" />
       </div>
     </BaseModal>
   </article>
@@ -26,10 +26,29 @@
   .item {
     margin: 20px 13px;
     width: calc(25% - 26px);
+
+    @include lg {
+      width: calc(33.3% - 26px);
+    }
+
+    @include md {
+      width: calc(50% - 26px);
+    }
+
+    @include sm {
+      margin: 12px 8px;
+      width: calc(100% - 16px);
+    }
   }
 
   .name {
     @apply tw-text-body-s-regular tw-text-white tw-mt-10;
+
+    @include sm {
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 6px;
+    }
   }
 
   .img-wrap {
