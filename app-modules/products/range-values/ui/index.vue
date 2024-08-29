@@ -1,21 +1,20 @@
 <template>
   <section class="ranges white-area">
     <div class="wrapper">
-      <div class="ranges__wrap">
+      <div v-if="productAttrs.rangeValues" class="ranges__wrap">
         <Item
-          v-if="product.rangeValues.dn"
+          v-if="productAttrs.rangeValues.dn"
           name="Номинальный<br>диаметр (DN)"
           icon="dn"
-          :from="product.rangeValues.dn.from"
-          :to="product.rangeValues.dn.to"
+          :from="productAttrs.rangeValues.dn.from"
+          :to="productAttrs.rangeValues.dn.to"
         />
         <Item
-          v-if="product.rangeValues.pn"
+          v-if="productAttrs.rangeValues.pn"
           name="Номинальное<br>давление (PN, кгс/см2)"
           icon="pn"
-          :rangeValue="product.rangeValues.pn"
-          :from="product.rangeValues.pn.from"
-          :to="product.rangeValues.pn.to"
+          :from="productAttrs.rangeValues.pn.from"
+          :to="productAttrs.rangeValues.pn.to"
         />
         <Item
           v-if="t"
@@ -31,14 +30,14 @@
 
 <script setup lang="ts">
   import Item from './Item.vue';
-  import type { ProductItem } from '@/stores/products';
+  import type { ProductAttrs } from '@/stores/products/attrs';
 
   const props = defineProps<{
-    product: ProductItem,
+    productAttrs: ProductAttrs,
   }>();
 
   const t = computed(() => {
-    const _t = props.product.rangeValues.t;
+    const _t = props.productAttrs.rangeValues?.t;
     if(!_t) return null;
 
     return {

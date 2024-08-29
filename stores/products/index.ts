@@ -16,24 +16,13 @@ export interface FittingType {
   icon: string,
 };
 
-export interface RangeValue {
-  from: number,
-  to: number,
-}
-
 export interface ProductItem {
   id: number,
   name: string,
   slug: string,
   category: Category,
   type: ProductType | null,
-  description: string,
   fittingType: FittingType | null,
-  rangeValues: {
-    dn?: RangeValue,
-    pn?: RangeValue,
-    t?: RangeValue,
-  },
 };
 
 export const useProductsStore = defineStore('productsStore', () => {
@@ -100,13 +89,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'zadvizhki-klinovyie-stalnyie',
       category: categories.value[0],
       type: null,
-      description: 'test',
       fittingType: fittingTypes.value[0],
-      rangeValues: {
-        dn: { from: 10, to: 20 },
-        pn: { from: 11, to: 21 },
-        t: { from: -100, to: 500 },
-      },
     },
     {
       id: ID.get(),
@@ -114,12 +97,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'klapany-zapornyie',
       category: categories.value[0],
       type: null,
-      description: 'test',
       fittingType: fittingTypes.value[0],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
     {
       id: ID.get(),
@@ -127,12 +105,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'zatvory-obratnyie',
       category: categories.value[0],
       type: null,
-      description: 'test',
       fittingType: fittingTypes.value[2],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
     {
       id: ID.get(),
@@ -140,12 +113,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'zatvory-diskovyie-povorotnyie-zaslonki',
       category: categories.value[0],
       type: null,
-      description: 'test',
       fittingType: fittingTypes.value[0],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
     {
       id: ID.get(),
@@ -153,12 +121,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'krany-sharovyie-razbornyie-iz-dvukh-chastiei',
       category: categories.value[0],
       type: productTypes.value[0],
-      description: 'test',
       fittingType: fittingTypes.value[0],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
     {
       id: ID.get(),
@@ -166,12 +129,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'krany-sharovyie-tsielnosvarnyie-iz-triekh-chastiei',
       category: categories.value[0],
       type: productTypes.value[0],
-      description: 'test',
       fittingType: fittingTypes.value[0],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
     {
       id: ID.get(),
@@ -179,12 +137,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'krany-sharovyie-razbornyie-iz-triekh-chastiei',
       category: categories.value[0],
       type: productTypes.value[0],
-      description: 'test',
       fittingType: fittingTypes.value[0],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
     {
       id: ID.get(),
@@ -192,12 +145,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'krany-sharovyie-tsielnosvarnyie-iz-dvukh-chastiei',
       category: categories.value[0],
       type: productTypes.value[0],
-      description: 'test',
       fittingType: fittingTypes.value[0],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
     {
       id: ID.get(),
@@ -205,12 +153,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'krany-sharovyie-razbornyie-s-vierkhniei-kryshkoi',
       category: categories.value[0],
       type: productTypes.value[0],
-      description: 'test',
       fittingType: fittingTypes.value[0],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
     {
       id: ID.get(),
@@ -218,12 +161,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'krany-sharovyie-tsielnosvarnyie-iz-triekh-chastiei-podziemnyie',
       category: categories.value[0],
       type: productTypes.value[0],
-      description: 'test',
       fittingType: fittingTypes.value[0],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
     {
       id: ID.get(),
@@ -231,12 +169,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'krany-sharovyie-tsielnosvarnyie-iz-dvukh-chastiei-podziemnyie',
       category: categories.value[0],
       type: productTypes.value[0],
-      description: 'test',
       fittingType: fittingTypes.value[0],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
     {
       id: ID.get(),
@@ -244,12 +177,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'krany-sharovyie-vysokotsiklichnyie',
       category: categories.value[0],
       type: productTypes.value[0],
-      description: 'test',
       fittingType: fittingTypes.value[0],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
     {
       id: ID.get(),
@@ -257,12 +185,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'klapany-stalnyie-pruzhinnyie-priedokhranitielnyie',
       category: categories.value[0],
       type: null,
-      description: 'test',
       fittingType: fittingTypes.value[3],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
     {
       id: ID.get(),
@@ -270,12 +193,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'zadvizhki-shibiernyie-zms',
       category: categories.value[0],
       type: productTypes.value[1],
-      description: 'test',
       fittingType: fittingTypes.value[0],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
     {
       id: ID.get(),
@@ -283,12 +201,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'zadvizhki-shibiernyie-zsh',
       category: categories.value[0],
       type: productTypes.value[1],
-      description: 'test',
       fittingType: fittingTypes.value[0],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
     {
       id: ID.get(),
@@ -296,12 +209,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'ustroistva-pieriekliuchaiushchiie',
       category: categories.value[0],
       type: null,
-      description: 'test',
       fittingType: fittingTypes.value[4],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
     {
       id: ID.get(),
@@ -309,12 +217,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'bloki-priedokhranitielnykh-klapanov',
       category: categories.value[0],
       type: null,
-      description: 'test',
       fittingType: fittingTypes.value[3],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
     {
       id: ID.get(),
@@ -322,12 +225,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'krany-sharovyie-spietsialnyie',
       category: categories.value[1],
       type: null,
-      description: 'test',
       fittingType: fittingTypes.value[0],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
     {
       id: ID.get(),
@@ -335,12 +233,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'priedokhranitielnyie-klapany-spietsialnyie',
       category: categories.value[1],
       type: null,
-      description: 'test',
       fittingType: fittingTypes.value[0],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
     {
       id: ID.get(),
@@ -348,12 +241,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'bloki-priedokhranitielnykh-klapanov-spietsialnyie',
       category: categories.value[1],
       type: null,
-      description: 'test',
       fittingType: fittingTypes.value[0],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
     {
       id: ID.get(),
@@ -361,12 +249,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       slug: 'klapany-obratnyie-spietsialnyie',
       category: categories.value[1],
       type: null,
-      description: 'test',
       fittingType: fittingTypes.value[0],
-      rangeValues: {
-        dn: { from: 0, to: 0 },
-        pn: { from: 0, to: 0 },
-      },
     },
   ]);
 

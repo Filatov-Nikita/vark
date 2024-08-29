@@ -4,8 +4,8 @@
       <h1 class="h1 h-mb-60">Продукция</h1>
     </div>
     <Catalog />
-    <RangeValues :product="curProduct" />
-    <Content :product="curProduct" />
+    <RangeValues :productAttrs="curAttrs" />
+    <Content :product="curProduct" :productAttrs="curAttrs" />
     <OrderProductsForm />
   </div>
 </template>
@@ -22,5 +22,11 @@
 
   const curProduct = computed(() => {
     return productsStore.getProductBySlug(route.params.slug as string);
+  });
+
+  const { productsAttrs } = storeToRefs(useProductsAttrsStore());
+
+  const curAttrs = computed(() => {
+    return productsAttrs.value[curProduct.value.slug];
   });
 </script>
