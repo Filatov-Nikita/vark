@@ -115,7 +115,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: null,
       description: 'test',
-      fittingType: fittingTypes.value[1],
+      fittingType: fittingTypes.value[0],
       rangeValues: {
         dn: { from: 0, to: 0 },
         pn: { from: 0, to: 0 },
@@ -141,7 +141,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: null,
       description: 'test',
-      fittingType: fittingTypes.value[3],
+      fittingType: fittingTypes.value[0],
       rangeValues: {
         dn: { from: 0, to: 0 },
         pn: { from: 0, to: 0 },
@@ -154,7 +154,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: productTypes.value[0],
       description: 'test',
-      fittingType: fittingTypes.value[4],
+      fittingType: fittingTypes.value[0],
       rangeValues: {
         dn: { from: 0, to: 0 },
         pn: { from: 0, to: 0 },
@@ -258,7 +258,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: null,
       description: 'test',
-      fittingType: fittingTypes.value[0],
+      fittingType: fittingTypes.value[3],
       rangeValues: {
         dn: { from: 0, to: 0 },
         pn: { from: 0, to: 0 },
@@ -297,7 +297,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: null,
       description: 'test',
-      fittingType: fittingTypes.value[0],
+      fittingType: fittingTypes.value[4],
       rangeValues: {
         dn: { from: 0, to: 0 },
         pn: { from: 0, to: 0 },
@@ -310,7 +310,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: null,
       description: 'test',
-      fittingType: fittingTypes.value[0],
+      fittingType: fittingTypes.value[3],
       rangeValues: {
         dn: { from: 0, to: 0 },
         pn: { from: 0, to: 0 },
