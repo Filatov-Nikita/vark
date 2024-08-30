@@ -3,7 +3,15 @@
     <div class="wrapper">
       <h1 class="h1 h-mb-60">Продукция</h1>
     </div>
-    <Catalog :product="curProduct" :model="curModel" />
+    <Catalog
+      :product="curProduct"
+      :slugs="slugs"
+      :curProductSlug="curProductSlug"
+      :curCategorySlug="curCategorySlug"
+      :items="items"
+      :model="curModel"
+      :categories="categories"
+    />
     <RangeValues :productAttrs="curAttrs" />
     <Content :product="curProduct" :productAttrs="curAttrs" :productDocs="curDocs" />
     <OrderProductsForm />
@@ -15,28 +23,31 @@
   import RangeValues from '@/app-modules/products/range-values/ui/index.vue';
   import Content from '@/app-modules/products/content/ui/index.vue';
   import OrderProductsForm from '@/app-modules/order-products-form/ui/index.vue';
-
-  const productsStore = useProductsStore();
+  import useProductCatalog from '@/app-modules/products/catalog/model/useProductCatalog';
+  import useCurrentProduct from '@/app-modules/products/catalog/model/useCurrentProduct';
 
   const route = useRoute();
 
-  const curProduct = computed(() => {
-    return productsStore.getProductBySlug(route.params.slug as string);
+  const curCategorySlug = computed({
+    get() {
+      return route.params.category as string;
+    },
+    set() {}
   });
 
-  const { productsAttrs } = storeToRefs(useProductsAttrsStore());
-  const { productModels } = useProductsModelsStore();
-  const { productDocuments } = useProductsDocsStore();
-
-  const curAttrs = computed(() => {
-    return productsAttrs.value[curProduct.value.slug];
+  const curProductSlug = computed({
+    get() {
+      return route.params.slug as string;
+    },
+    set() {}
   });
 
-  const curDocs = computed(() => {
-    return productDocuments[curProduct.value.slug];
-  });
+  const {
+    curProduct,
+    curModel,
+    curAttrs,
+    curDocs,
+  } = useCurrentProduct(curProductSlug);
 
-  const curModel = computed(() => {
-    return productModels[curProduct.value.slug];
-  });
+  const { slugs, items, categories } = useProductCatalog(curCategorySlug);
 </script>

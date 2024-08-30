@@ -11,7 +11,6 @@
       tone-mapping="neutral"
       hadow-intensity="1"
     ></model-viewer>
-      <!-- camera-orbit="auto auto 2m" -->
   </div>
 </template>
 

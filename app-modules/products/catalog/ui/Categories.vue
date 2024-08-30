@@ -5,7 +5,11 @@
       :class="{ 'btn-item--active': item.slug === activeSlug }"
       v-for="(item, index) in items"
       :key="item.id"
-      :to="{ name: 'products-category-slug', params: { category: item.slug, slug: slugs[index] } }"
+      :to="
+        $route.name === 'products-category-slug'
+          ? { params: { category: item.slug, slug: slugs[index] } }
+          : { query: { productCategorySlug: item.slug, productSlug: slugs[index] } }
+      "
     >
       {{ item.name }}
     </NuxtLink>

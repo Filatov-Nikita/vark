@@ -3,7 +3,11 @@
     v-if="item.type === 'single'"
     class="item-link"
     :class="{ 'item-link--active': activeProductSlug === item.product.slug }"
-    :to="{ params: { category: item.product.category.slug, slug: item.product.slug } }"
+    :to="
+      $route.name === 'products-category-slug'
+        ? { params: { category: item.product.category.slug, slug: item.product.slug } }
+        : { query: { productCategorySlug: item.product.category.slug, productSlug: item.product.slug } }
+    "
   >
     {{ item.product.name }}
   </NuxtLink>
@@ -17,9 +21,13 @@
     <SlideUpDown class="group__items" :active="showedItems" :duration="300">
       <NuxtLink
         v-for="child in item.products"
-        :to="{ params: { category: child.category.slug, slug: child.slug } }"
         class="item-link item-link--child"
         :class="{ 'item-link--active': activeProductSlug === child.slug }"
+        :to="
+          $route.name === 'products-category-slug'
+            ? { params: { category: child.category.slug, slug: child.slug } }
+            : { query: { productCategorySlug: child.category.slug, productSlug: child.slug } }
+        "
       >
         {{ child.name }}
       </NuxtLink>
