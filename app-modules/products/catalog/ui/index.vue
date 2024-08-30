@@ -8,7 +8,7 @@
         </aside>
         <div class="right">
           <ClientOnly>
-            <Model />
+            <Model :model="model" />
           </ClientOnly>
         </div>
       </div>
@@ -22,6 +22,13 @@
   import useGroupItems from '../model/useGroupItems';
   import useProductSlugs from '../model/useProductSlugs';
   import Model from './Model.vue';
+  import type { ProductItem } from '@/stores/products';
+  import type { ModelItem } from '@/stores/products/models';
+
+  defineProps<{
+    product: ProductItem,
+    model: ModelItem,
+  }>();
 
   const route = useRoute();
   const router = useRouter();

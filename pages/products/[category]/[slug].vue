@@ -3,7 +3,7 @@
     <div class="wrapper">
       <h1 class="h1 h-mb-60">Продукция</h1>
     </div>
-    <Catalog />
+    <Catalog :product="curProduct" :model="curModel" />
     <RangeValues :productAttrs="curAttrs" />
     <Content :product="curProduct" :productAttrs="curAttrs" />
     <OrderProductsForm />
@@ -25,8 +25,13 @@
   });
 
   const { productsAttrs } = storeToRefs(useProductsAttrsStore());
+  const { productModels } = useProductsModelsStore();
 
   const curAttrs = computed(() => {
     return productsAttrs.value[curProduct.value.slug];
+  });
+
+  const curModel = computed(() => {
+    return productModels[curProduct.value.slug];
   });
 </script>

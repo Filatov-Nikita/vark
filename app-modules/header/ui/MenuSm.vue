@@ -43,7 +43,7 @@
 <style scoped lang="scss">
   .menu-sm {
     position: fixed;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     z-index: 9000;
     left: 0;
