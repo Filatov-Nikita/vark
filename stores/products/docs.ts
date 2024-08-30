@@ -345,6 +345,40 @@ export const useProductsDocsStore = defineStore('productsDocsStore', () => {
         'ustroistva-pieriekliuchaiushchiie/6',
       ),
     ],
+    'bloki-priedokhranitielnykh-klapanov': [
+      getDocItem(
+        'Сертификат ИНТИ (INTI.QS.PS.20-12-2023-492)',
+        'bloki-priedokhranitielnykh-klapanov/0',
+      ),
+      getDocItem(
+        'Декларация ТР ТС 010 (ЕАЭС N RU Д-RU.АБ53.В.00824_20)',
+        'bloki-priedokhranitielnykh-klapanov/1',
+      ),
+      getDocItem(
+        'Сертификат ТР ТС 012 (ТС RU C-RU.АЖ58.В.00401_20)',
+        'bloki-priedokhranitielnykh-klapanov/2',
+      ),
+      getDocItem(
+        'Декларация ТР ТС 032 (ЕАЭС N RU Д-RU.АД07.В.02533_20)',
+        'bloki-priedokhranitielnykh-klapanov/3',
+      ),
+      getDocItem(
+        'Сертификат ТР ТС 032 (ЕАЭС RU C-RU.АД07.В.01264_20)',
+        'bloki-priedokhranitielnykh-klapanov/4',
+      ),
+      getDocItem(
+        'Сертификат климатика (РОСС RU.32001.04ИБФ1.ОСП29.22563)',
+        'bloki-priedokhranitielnykh-klapanov/5',
+      ),
+      getDocItem(
+        'Сертификат сейсмостойкость (РОСС RU.32001.04ИБФ1.ОСП29.22564)',
+        'bloki-priedokhranitielnykh-klapanov/6',
+      ),
+      getDocItem(
+        'Сертификат огнестойкость (РОСС RU.04РИД0.ОСП01.К00138)',
+        'bloki-priedokhranitielnykh-klapanov/7',
+      ),
+    ],
   };
 
   return {
