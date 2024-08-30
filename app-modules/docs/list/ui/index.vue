@@ -1,32 +1,36 @@
 <template>
   <div>
-    <Tabs class="tabs" :items="docTypes" v-model:activeTab="tab" />
+    <Tabs class="tabs" :items="tabs" v-model:activeTab="tab" />
     <Swiper :initialSlide="tab" :allowTouchMove="false" @swiper="swiper = $event">
-      <SwiperSlide
-        v-for="(cat, index) in catList"
-      >
-        <ProductListWrap v-if="index === 0" :items="cat.items" v-slot="{ filtredItems }">
-          <List :items="filtredItems" />
-        </ProductListWrap>
-        <List
-          v-else
-          :items="cat.items"
-        />
+      <SwiperSlide>
+        <Select class="p-select" :options="options" v-model="curProduct" />
+        <List ref="productsDocsRef" :items="filtredDocs" />
+      </SwiperSlide>
+      <SwiperSlide v-for="items in commonDocs">
+        <List :items="items" />
       </SwiperSlide>
     </Swiper>
   </div>
 </template>
 
 <script setup lang="ts">
-  import { catList } from '../model/docs';
+  import useDocs from '../model/useDocs';
+  import useProductsDocs from '../model/useProductsDocs';
   import Tabs from './Tabs.vue';
   import List from './List.vue';
-  import ProductListWrap from './ProductListWrap.vue';
+  import Select from './Select.vue';
 
   const swiper = ref<any>(null);
-  const tab = ref(0);
 
-  const docTypes = computed(() => catList.map(cat => cat.catName));
+  const { products } = storeToRefs(useProductsStore());
+  const { productDocuments } = useProductsDocsStore();
+  const { tabs, tab, commonDocs } = useDocs();
+  const { options, curProduct, filtredDocs } = useProductsDocs(products, productDocuments);
+  const productsDocsRef = ref<any>(null);
+
+  watch(curProduct, () => {
+    if(productsDocsRef.value) productsDocsRef.value.animate();
+  });
 
   watch(tab, (index) => {
     swiper.value.slideTo(index);
@@ -39,6 +43,16 @@
 
     @include sm {
       margin-bottom: 20px;
+    }
+  }
+
+  .p-select {
+    max-width: 340px;
+    margin-bottom: 18px;
+
+    @include sm {
+      max-width: 100%;
+      margin-bottom: 16px;
     }
   }
 </style>

@@ -18,6 +18,49 @@ function getDocItem(name: string, baseUrl: string): DocItem {
   };
 }
 
+const sharovyie = [
+  getDocItem(
+    'Сертификат ИНТИ (INTI.QS.PS.20-12-2023-493)',
+    'krany-sharovyie/0',
+  ),
+  getDocItem(
+    'Сертификат ИНТЕРГАЗСЕРТ (ОГН4.RU.1102.В02738)',
+    'krany-sharovyie/1',
+  ),
+  getDocItem(
+    'Декларация ТР ТС 010 (ЕАЭС N RU Д-RU.АБ53.В.00826_20)',
+    'krany-sharovyie/2',
+  ),
+  getDocItem(
+    'Сертификат ТР ТС 012 (ЕАЭС RU C-RU.АЖ58.В.04047_23)',
+    'krany-sharovyie/3',
+  ),
+  getDocItem(
+    'Декларация ТР ТС 032 (ЕАЭС N RU Д-RU.АД07.В.02532_20)',
+    'krany-sharovyie/4',
+  ),
+  getDocItem(
+    'Сертификат ТР ТС 032 (ЕАЭС RU C-RU.АД07.В.01268_20)',
+    'krany-sharovyie/5',
+  ),
+  getDocItem(
+    'Сертификат климатика (РОСС RU.32001.04ИБФ1.ОСП29.22571)',
+    'krany-sharovyie/6',
+  ),
+  getDocItem(
+    'Сертификат сейсмостойкость (РОСС RU.32001.04ИБФ1.ОСП29.22572)',
+    'krany-sharovyie/7',
+  ),
+  getDocItem(
+    'Сертификат огнестойкость (РОСС RU.04РИД0.ОСП01.К00137)',
+    'krany-sharovyie/8',
+  ),
+  getDocItem(
+    'САНПИН (413)',
+    'krany-sharovyie/9',
+  ),
+];
+
 export const useProductsDocsStore = defineStore('productsDocsStore', () => {
   const productDocuments: Record<string, DocItem[]> = {
     'zadvizhki-klinovyie-stalnyie': [
@@ -137,87 +180,63 @@ export const useProductsDocsStore = defineStore('productsDocsStore', () => {
     'zatvory-diskovyie-povorotnyie-zaslonki': [
       getDocItem(
         'Сертификат ИНТИ (INTI.QS.PS.20-12-2023-489)',
-        'zatvory-diskovyie-povorotnyie-zaslonk/0',
+        'zatvory-diskovyie-povorotnyie-zaslonki/0',
       ),
       getDocItem(
         'Декларация ТР ТС 010 (ЕАЭС N RU Д-RU.РА01.В.95929_20)',
-        'zatvory-diskovyie-povorotnyie-zaslonk/1',
+        'zatvory-diskovyie-povorotnyie-zaslonki/1',
       ),
       getDocItem(
         'Сертификат ТР ТС 012 (ТС RU C-RU.АЖ58.В.00887_20)',
-        'zatvory-diskovyie-povorotnyie-zaslonk/2',
+        'zatvory-diskovyie-povorotnyie-zaslonki/2',
       ),
       getDocItem(
         'Декларация ТР ТС 032 (ЕАЭС N RU Д-RU.АЖ58.В.00130_20)',
-        'zatvory-diskovyie-povorotnyie-zaslonk/3',
+        'zatvory-diskovyie-povorotnyie-zaslonki/3',
       ),
       getDocItem(
         'Сертификат ТР ТС 032 (ЕАЭС RU C-RU.АД07.В.01273_20)',
-        'zatvory-diskovyie-povorotnyie-zaslonk/4',
+        'zatvory-diskovyie-povorotnyie-zaslonki/4',
       ),
       getDocItem(
         'Сертификат ТР ТС 043 (ЕАЭС RU С-RU.АБ03.В.00276_23)',
-        'zatvory-diskovyie-povorotnyie-zaslonk/5',
+        'zatvory-diskovyie-povorotnyie-zaslonki/5',
       ),
       getDocItem(
         'Сертификат климатика (Серия 001 № 697)',
-        'zatvory-diskovyie-povorotnyie-zaslonk/6',
+        'zatvory-diskovyie-povorotnyie-zaslonki/6',
       ),
       getDocItem(
         'Сертификат сейсмостойкость (РОСС RU.32001.04ИБФ1.ОСП29.28703)',
-        'zatvory-diskovyie-povorotnyie-zaslonk/7',
+        'zatvory-diskovyie-povorotnyie-zaslonki/7',
       ),
       getDocItem(
         'Сертификат пожарной безопасность (НСОПБ.RU.ЭО.ПР.179.Н.00457)',
-        'zatvory-diskovyie-povorotnyie-zaslonk/8',
+        'zatvory-diskovyie-povorotnyie-zaslonki/8',
       ),
       getDocItem(
         'САНПИН (001515)',
-        'zatvory-diskovyie-povorotnyie-zaslonk/9',
+        'zatvory-diskovyie-povorotnyie-zaslonki/9',
       ),
     ],
-    'krany-sharovyie': [
-      getDocItem(
-        'Сертификат ИНТИ (INTI.QS.PS.20-12-2023-493)',
-        'krany-sharovyie/0',
-      ),
-      getDocItem(
-        'Сертификат ИНТЕРГАЗСЕРТ (ОГН4.RU.1102.В02738)',
-        'krany-sharovyie/1',
-      ),
-      getDocItem(
-        'Декларация ТР ТС 010 (ЕАЭС N RU Д-RU.АБ53.В.00826_20)',
-        'krany-sharovyie/2',
-      ),
-      getDocItem(
-        'Сертификат ТР ТС 012 (ЕАЭС RU C-RU.АЖ58.В.04047_23)',
-        'krany-sharovyie/3',
-      ),
-      getDocItem(
-        'Декларация ТР ТС 032 (ЕАЭС N RU Д-RU.АД07.В.02532_20)',
-        'krany-sharovyie/4',
-      ),
-      getDocItem(
-        'Сертификат ТР ТС 032 (ЕАЭС RU C-RU.АД07.В.01268_20)',
-        'krany-sharovyie/5',
-      ),
-      getDocItem(
-        'Сертификат климатика (РОСС RU.32001.04ИБФ1.ОСП29.22571)',
-        'krany-sharovyie/6',
-      ),
-      getDocItem(
-        'Сертификат сейсмостойкость (РОСС RU.32001.04ИБФ1.ОСП29.22572)',
-        'krany-sharovyie/7',
-      ),
-      getDocItem(
-        'Сертификат огнестойкость (РОСС RU.04РИД0.ОСП01.К00137)',
-        'krany-sharovyie/8',
-      ),
-      getDocItem(
-        'САНПИН (413)',
-        'krany-sharovyie/9',
-      ),
-    ],
+    'krany-sharovyie-razbornyie-iz-dvukh-chastiei':
+      sharovyie,
+    'krany-sharovyie-tsielnosvarnyie-iz-triekh-chastiei':
+      sharovyie,
+    'krany-sharovyie-razbornyie-iz-triekh-chastiei':
+      sharovyie,
+    'krany-sharovyie-tsielnosvarnyie-iz-dvukh-chastiei':
+      sharovyie,
+    'krany-sharovyie-razbornyie-s-vierkhniei-kryshkoi':
+      sharovyie,
+    'krany-sharovyie-tsielnosvarnyie-iz-triekh-chastiei-podziemnyie':
+      sharovyie,
+    'krany-sharovyie-tsielnosvarnyie-iz-dvukh-chastiei-podziemnyie':
+      sharovyie,
+    'krany-sharovyie-vysokotsiklichnyie':
+      sharovyie,
+    'krany-sharovyie-spietsialnyie':
+      sharovyie,
     'klapany-stalnyie-pruzhinnyie-priedokhranitielnyie': [
       getDocItem(
         'Сертификат ИНТИ (INTI.QS.PS.20-12-2023-492)',

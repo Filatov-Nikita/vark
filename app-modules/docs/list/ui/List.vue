@@ -1,25 +1,37 @@
 <template>
   <div class="wrap">
-    <div class="items">
-      <TransitionGroup name="list-item">
-        <Item
+    <Transition name="list">
+      <div class="items" v-show="shwowing">
+        <DocsItem
           class="list-item"
           v-for="item in items"
           :key="item.name"
           :item="item"
         />
-      </TransitionGroup>
-    </div>
+      </div>
+    </Transition>
   </div>
 </template>
 
 <script setup lang="ts">
-  import Item from './Item.vue';
-  import type { Item as TItem } from '../model/docs';
+  import type { DocItem as TItem } from '@/stores/products/docs';
 
   defineProps<{
     items: TItem[],
   }>();
+
+  const shwowing = ref(true);
+
+  function animate() {
+    shwowing.value = false;
+    setTimeout(() => {
+      shwowing.value = true;
+    }, 20);
+  }
+
+  defineExpose({
+    animate,
+  });
 </script>
 
 <style scoped lang="scss">
@@ -33,17 +45,13 @@
     }
   }
 
-  .list-item {
-    transition: opacity 1s ease, transform 1s ease;
-  }
-
-  .list-item-leave-to, .list-item-enter-from {
+  .list-enter-from {
     opacity: 0;
     transform: translateY(30px);
   }
 
-  .list-item-leave-active {
-    display: none;
+  .list-enter-active {
+    transition: opacity 1s ease, transform 1s ease;
   }
 
   .wrap {
