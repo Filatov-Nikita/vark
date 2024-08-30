@@ -1,6 +1,6 @@
 import type { Image } from '@/types/shared/image';
 
-interface DocItem {
+export interface DocItem {
   name: string,
   preview: Image,
   url: string,

@@ -8,7 +8,7 @@
         <TableAttrs :productAttrs="productAttrs" />
       </SlideItem>
       <SlideItem label="Документация">
-        docs
+        <DocsList :productDocs="productDocs" />
       </SlideItem>
     </div>
   </div>
@@ -17,12 +17,15 @@
 <script setup lang="ts">
   import BlockDescription from './BlockDescription.vue';
   import TableAttrs from './TableAttrs.vue';
+  import DocsList from './DocsList.vue';
   import type { ProductItem } from '@/stores/products';
   import type { ProductAttrs } from '@/stores/products/attrs';
+  import type { DocItem } from '@/stores/products/docs';
 
   defineProps<{
     product: ProductItem,
     productAttrs: ProductAttrs,
+    productDocs: DocItem[],
   }>();
 </script>
 
