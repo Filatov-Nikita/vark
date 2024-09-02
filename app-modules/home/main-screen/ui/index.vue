@@ -10,7 +10,7 @@
       <div class="main-screen__wrap">
         <h1 class="h1">{{ title }}</h1>
         <p class="main-screen__subtitle">{{ subtitle }}</p>
-        <BaseButton class="main-screen__order" design="red-white-xl" @click="scrollForm">Заказать продукцию</BaseButton>
+        <BaseButton class="main-screen__order" design="red-white-xl" @click="scrollOrder">Заказать продукцию</BaseButton>
       </div>
     </div>
     <video ref="video" class="main-screen__video" src="/videos/bg.mp4" :poster="poster" muted loop preload="none"></video>
@@ -28,12 +28,6 @@
 
   const title = 'ПРОИЗВОДСТВО ТРУБОПРОВОДНОЙ АРМАТУРЫ';
   const subtitle = 'Надежность и качество в каждой детали';
-
-  function scrollForm() {
-    const formEl = document.querySelector('.order-form');
-    if(!formEl) return;
-    formEl.scrollIntoView({ behavior: 'smooth' });
-  }
 
   const video = ref<HTMLVideoElement | null>(null);
 

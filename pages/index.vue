@@ -9,7 +9,20 @@
     :items="items"
     :model="curModel"
     :categories="categories"
-  />
+  >
+    <template #actions>
+      <BaseButton
+        class="tw-w-full tw-max-w-[234px]"
+        design="dark-md"
+        :to="{
+          name: 'products-category-slug',
+          params: { category: curProduct.category.slug, slug: curProduct.slug }
+        }"
+      >
+        Подробнее
+      </BaseButton>
+    </template>
+  </Catalog>
   <About />
   <Gallery />
   <Quality />

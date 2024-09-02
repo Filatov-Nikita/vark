@@ -11,7 +11,13 @@
       :items="items"
       :model="curModel"
       :categories="categories"
-    />
+    >
+      <template #actions>
+        <BaseButton class="tw-w-full tw-max-w-[234px]" design="red-md" @click="scrollOrder">
+          Заказать
+        </BaseButton>
+      </template>
+    </Catalog>
     <RangeValues :productAttrs="curAttrs" />
     <Content :product="curProduct" :productAttrs="curAttrs" :productDocs="curDocs" />
     <OrderProductsForm />

@@ -10,6 +10,9 @@
           <ClientOnly>
             <Model :model="model" />
           </ClientOnly>
+          <div class="actions">
+            <slot name="actions"></slot>
+          </div>
         </div>
       </div>
     </div>
@@ -58,5 +61,13 @@
   .right {
     width: 100%;
     max-width: 600px;
+  }
+
+  .actions {
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
   }
 </style>
