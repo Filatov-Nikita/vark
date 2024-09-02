@@ -3,7 +3,19 @@
     <div class="wrapper">
       <div class="achivements__wrap">
         <div class="achive-item" v-for="item in items">
-          <p class="achive-item__value">{{ item.value }}</p>
+          <p class="achive-item__value">
+            <span v-if="ssr">1</span>
+            <NumberAnimation
+              v-else
+              :from="1"
+              :to="item.value"
+              :duration="1.7"
+              :format="theFormat"
+              :delay="500"
+              easing="easeOutQuad"
+            />
+            <span v-if="item.after">{{ item.after }}</span>
+          </p>
           <p class="achive-item__label">{{ item.label }}</p>
         </div>
       </div>
@@ -13,6 +25,14 @@
 
 <script setup lang="ts">
   import items from '../model/items';
+  //@ts-ignore
+  import NumberAnimation from 'vue-number-animation';
+
+  const ssr = import.meta.server;
+
+  function theFormat(value: number) {
+    return prettyAmount(value.toFixed(0));
+  }
 </script>
 
 <style scoped lang="scss">
@@ -28,7 +48,7 @@
     &__wrap {
       display: flex;
       flex-wrap: wrap;
-      column-gap: 120px;
+      justify-content: space-between;
       row-gap: 60px;
 
       @include sm {
@@ -39,6 +59,22 @@
 
   .achive-item {
     @apply tw-text-white;
+
+    &:nth-child(1) {
+      width: 280px;
+    }
+
+    &:nth-child(2) {
+      width: 140px;
+    }
+
+    &:nth-child(3) {
+      width: 280px;
+    }
+
+    &:nth-child(4) {
+      width: 162px;
+    }
 
     @include sm {
       width: 100%;
