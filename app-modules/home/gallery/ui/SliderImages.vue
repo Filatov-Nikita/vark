@@ -19,7 +19,7 @@
     <SwiperSlide
       v-for="image in images"
     >
-      <img :width="image.width" :height="image.height" :src="image.path" loading="lazy" />
+      <img class="photo" :width="image.width" :height="image.height" :src="image.path" loading="lazy" />
     </SwiperSlide>
   </Swiper>
 </template>
@@ -39,5 +39,9 @@
     @include sm {
       display: none;
     }
+  }
+
+  .photo {
+    border-radius: 20px;
   }
 </style>

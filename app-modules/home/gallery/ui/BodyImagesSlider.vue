@@ -52,11 +52,15 @@
 
   .image {
     border-radius: 20px;
+    width: auto;
+    height: auto;
     max-height: calc(100vh - 272px);
-    object-fit: contain;
   }
 
   .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0 60px;
 
     @include sm {

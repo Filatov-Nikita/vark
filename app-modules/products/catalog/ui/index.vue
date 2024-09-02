@@ -1,7 +1,7 @@
 <template>
   <section class="catalog">
     <div class="wrapper">
-      <Categories class="cats" :items="categories" :slugs="slugs" :activeSlug="curCategorySlug" />
+      <Categories class="cats" :items="categories.slice(0, 1)" :slugs="slugs" :activeSlug="curCategorySlug" />
       <div class="wrap">
         <aside class="left">
           <NavItems :items="items" :activeProductSlug="curProductSlug" />
