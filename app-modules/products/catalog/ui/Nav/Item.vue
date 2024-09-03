@@ -61,7 +61,13 @@
 
   .item-link {
     @extend %item;
+    transition: transform 150ms;
     display: block;
+
+    &:hover {
+      transform: scale(1.05) translateX(16px);
+      @apply tw-text-white;
+    }
 
     &--active {
       @apply tw-text-white tw-font-extrabold;
@@ -85,6 +91,10 @@
 
     &__name {
       @extend %item;
+
+      &:hover {
+        @apply tw-text-white;
+      }
     }
 
     &__icon {

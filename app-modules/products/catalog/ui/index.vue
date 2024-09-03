@@ -64,7 +64,7 @@
   }
 
   .actions {
-    padding-top: 30px;
+    padding-top: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
