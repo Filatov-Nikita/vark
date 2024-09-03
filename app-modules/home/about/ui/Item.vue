@@ -1,5 +1,5 @@
 <template>
-  <article class="item">
+  <article ref="itemRef" class="item">
     <div class="item__icon-wrap">
       <BaseIcon class="item__icon" :name="icon" />
     </div>
@@ -14,6 +14,12 @@
     text: string,
     icon: string,
   }>();
+
+  const itemRef = ref<HTMLElement | null>(null);
+
+  defineExpose({
+    itemRef,
+  });
 </script>
 
 <style scoped lang="scss">
@@ -21,7 +27,6 @@
     border-radius: 20px;
     background: #2B2B2B;
     padding: 30px 35px;
-    height: 100%;
     transition: background-color 200ms;
     @apply tw-text-white;
 

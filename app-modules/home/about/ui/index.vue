@@ -1,7 +1,7 @@
 <template>
   <section class="about white-area">
     <div class="wrapper">
-      <h2 class="h2 tw-mb-20">Ваш надежный <span class="tw-text-primary">поставщик</span></h2>
+      <h2 class="h2 h-mb-50">Ваш надежный <span class="tw-text-primary">поставщик</span></h2>
       <Slider />
     </div>
   </section>

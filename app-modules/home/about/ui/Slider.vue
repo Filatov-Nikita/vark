@@ -1,29 +1,51 @@
 <template>
-  <Swiper
-    :space-between="20"
-    :slides-per-view="2"
-    :slides-per-group="2"
-    @swiper="swiper = $event"
-  >
-    <template v-slot:container-start>
-      <SwiperNav
-        class="tw-justify-end tw-mb-8"
-        @prev="swiper.slidePrev()"
-        @next="swiper.slideNext()"
-      />
-    </template>
-    <SwiperSlide
+  <div ref="section" class="items">
+    <Item
+      ref="itemsRef"
+      class="items__item"
       v-for="item in items"
-      class="!tw-h-auto"
-    >
-      <Item v-bind="item" />
-    </SwiperSlide>
-  </Swiper>
+      v-bind="item"
+    />
+  </div>
 </template>
 
 <script setup lang="ts">
   import Item from './Item.vue';
   import items from '../model/items';
 
-  const swiper = ref<any>(null);
+  const section = ref<HTMLElement | null>(null);
+  const itemsRef = ref<any[]>([]);
+
+  useIntersect(
+    section,
+    () => {
+      itemsRef.value.forEach((item, index) => {
+        setTimeout(() => {
+          item.itemRef.classList.add('items__item--fade');
+        }, 300 * index);
+      });
+    },
+    () => {},
+    { threshold: 0.7, once: true }
+  );
 </script>
+
+<style scoped lang="scss">
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+
+    &__item {
+      width: calc(50% - 20px);
+      margin: 10px;
+      visibility: hidden;
+
+      &--fade {
+        visibility: visible;
+        animation: fadeInDown;
+        animation-duration: 500ms;
+      }
+    }
+  }
+</style>
