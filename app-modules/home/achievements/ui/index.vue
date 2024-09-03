@@ -1,5 +1,5 @@
 <template>
-  <section class="achivements">
+  <section ref="section" class="achivements">
     <div class="wrapper">
       <div class="achivements__wrap">
         <div class="achive-item" v-for="item in items">
@@ -7,12 +7,13 @@
             <span v-if="ssr">1</span>
             <NumberAnimation
               v-else
+              ref="numbers"
               :from="1"
               :to="item.value"
               :duration="1.7"
               :format="theFormat"
-              :delay="500"
               easing="easeOutQuad"
+              :autoplay="false"
             />
             <span v-if="item.after">{{ item.after }}</span>
           </p>
@@ -33,6 +34,19 @@
   function theFormat(value: number) {
     return prettyAmount(value.toFixed(0));
   }
+
+  const numbers = ref<any[] | null>(null);
+  const section = ref<HTMLElement | null>(null)
+
+  useIntersect(
+    section,
+    () => {
+      numbers.value?.forEach((el) => {
+        el?.restart();
+      });
+    }, () => {},
+    { threshold: 0.8, once: true }
+  );
 </script>
 
 <style scoped lang="scss">

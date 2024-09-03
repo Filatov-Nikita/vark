@@ -2,7 +2,7 @@
   <section class="order-form">
     <div class="wrapper">
       <div class="order-form__wrap">
-        <div class="order-form__logo">
+        <div ref="logo" class="order-form__logo">
           <img width="393" height="403" src="./assets/logo.svg" alt="логотип Варк" loading="lazy">
         </div>
         <div class="order-form__form">
@@ -17,6 +17,19 @@
 
 <script setup lang="ts">
   import Form from './Form.vue';
+
+  const logo = ref<HTMLElement | null>(null);
+
+  useIntersect(
+    logo,
+    (entry) => {
+      entry.target.classList.add('order-form__logo--rotate');
+    },
+    (entry) => {
+      entry.target.classList.remove('order-form__logo--rotate');
+    },
+    { threshold: 0.8 }
+  );
 </script>
 
 <style scoped lang="scss">
@@ -69,6 +82,11 @@
 
     &__logo {
       flex-basis: 392px;
+
+      &--rotate {
+        transition: transform 500ms;
+        transform: rotateY(180deg);
+      }
 
       @include lg {
         flex-basis: 300px;
