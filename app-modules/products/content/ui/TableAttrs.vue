@@ -90,6 +90,10 @@
     grid-template-columns: 250px 1fr;
     border-bottom: 1px solid #DEDEDE;
 
+    @include sm {
+      grid-template-columns: 100%;
+    }
+
     &:last-child {
       border: 0;
     }
@@ -97,14 +101,27 @@
 
   .col1, .col2 {
     padding: 20px 24px;
+
+    @include sm {
+      padding: 16px;
+    }
   }
 
   .col1 {
     color: #6C6C6C;
+
+    @include sm {
+      padding-bottom: 4px;
+      font-weight: 600;
+    }
   }
 
   .col2 {
     border-left: 1px solid #DEDEDE;
+
+    @include sm {
+      border-left: 0px;
+    }
   }
 
   .t-list {
