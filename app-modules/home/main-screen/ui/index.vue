@@ -9,7 +9,7 @@
       </MenuSm>
       <div class="main-screen__wrap">
         <h1 class="h1">{{ title }}</h1>
-        <p class="main-screen__subtitle">{{ subtitle }}</p>
+        <p class="main-screen__subtitle" v-html="subtitle"></p>
         <BaseButton class="main-screen__order" design="red-white-xl" @click="scrollOrder">Заказать продукцию</BaseButton>
       </div>
     </div>
@@ -36,7 +36,7 @@
   const showedMenuSm = ref(false);
 
   const title = 'ПРОИЗВОДСТВО ТРУБОПРОВОДНОЙ АРМАТУРЫ';
-  const subtitle = 'Надежность и качество в каждой детали';
+  const subtitle = 'Инжиниринг, производство, поставка и&nbsp;сервисное обслуживание';
 
   const video = ref<HTMLVideoElement | null>(null);
 
@@ -71,6 +71,7 @@
     }
 
     &__subtitle {
+      max-width: 570px;
       margin-top: 25px;
       margin-bottom: 55px;
       font-weight: 500;

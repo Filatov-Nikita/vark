@@ -62,13 +62,8 @@
     &__wrap {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
       row-gap: 60px;
-
-      @include lg {
-        column-gap: 100px;
-        justify-content: flex-start;
-      }
+      column-gap: 60px;
 
       @include md {
         column-gap: 120px;
@@ -92,7 +87,7 @@
     }
 
     &:nth-child(2) {
-      width: 140px;
+      width: 220px;
     }
 
     &:nth-child(3) {
@@ -100,7 +95,7 @@
     }
 
     &:nth-child(4) {
-      width: 162px;
+      width: 220px;
     }
 
     &__label {

@@ -5,8 +5,8 @@ export default [
     after: '+',
   },
   {
-    label: 'Товарных групп',
-    value: 14,
+    label: 'Лет в арматуростроении',
+    value: 17,
     after: '',
   },
   {
@@ -15,8 +15,8 @@ export default [
     after: ' млн+',
   },
   {
-    label: 'Сред применения',
-    value: 20,
+    label: 'Постоянных заказчиков',
+    value: 1000,
     after: '',
   },
 ];
