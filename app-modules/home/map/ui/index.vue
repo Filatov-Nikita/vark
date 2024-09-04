@@ -3,20 +3,26 @@
     <div class="wrapper">
       <h2 class="h2 h-mb-50">География поставок</h2>
       <div class="wrap">
-        <img width="1800" height="954" src="./assets/map.png" alt="карта поставок" loading="lazy">
+        <img width="1800" height="954" src="./assets/map-clear.png" alt="карта поставок" loading="lazy">
+        <Cover />
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-
+  import Cover from './Cover.vue';
 </script>
 
 <style scoped lang="scss">
   .map {
     padding-top: 80px;
     padding-bottom: 140px;
+
+    @include sm {
+      padding-top: 50px;
+      padding-bottom: 70px;
+    }
   }
 
   .wrap {
