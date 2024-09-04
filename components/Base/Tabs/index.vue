@@ -28,6 +28,7 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid #CDCDCD;
+    gap: 30px;
   }
 
   .tab-item {

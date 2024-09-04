@@ -47,6 +47,11 @@
     padding-top: 120px;
     padding-bottom: 60px;
 
+    @include sm {
+      padding-top: 80px;
+      padding-bottom: 50px;
+    }
+
     &__wrap {
       overflow-y: hidden;
       padding-bottom: 40px;
