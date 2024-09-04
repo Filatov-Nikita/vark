@@ -13,7 +13,7 @@
         <BaseButton class="main-screen__order" design="red-white-xl" @click="scrollOrder">Заказать продукцию</BaseButton>
       </div>
     </div>
-    <video ref="video" class="main-screen__video" :poster="poster" muted loop preload="none">
+    <video ref="video" class="main-screen__video" :poster="poster" muted loop autoplay playsinline preload="none">
       <source
         :src="'/videos/bg.webm'"
         type="video/webm"
