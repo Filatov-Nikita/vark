@@ -48,8 +48,12 @@
     z-index: 9000;
     left: 0;
     top: 0;
-    padding-top: 16px;
+    padding-top: 30px;
     @apply tw-bg-bg-grafit;
+
+    @include sm {
+      padding-top: 16px;
+    }
   }
 
   .menu-enter-active {
