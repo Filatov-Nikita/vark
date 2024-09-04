@@ -24,6 +24,10 @@
   const section = ref<HTMLElement | null>(null);
   const itemsRef = ref<HTMLElement[]>([]);
 
+  let threshold = 0.7;
+
+  if(import.meta.client && window.screen.width <= 719.9) threshold = 0.4;
+
   useIntersect(
     section,
     () => {
@@ -34,7 +38,7 @@
       });
     },
     () => {},
-    { threshold: 0.7, once: true },
+    { threshold, once: true },
   )
 </script>
 
@@ -42,6 +46,11 @@
   .perfomance {
     padding-top: 90px;
     padding-bottom: 80px;
+
+    @include sm {
+      padding-top: 35px;
+      padding-bottom: 45px;
+    }
   }
 
   .items {
@@ -49,6 +58,11 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+
+    @include md {
+      grid-template-columns: 100%;
+      gap: 60px;
+    }
 
     &::before {
       position: absolute;
@@ -59,6 +73,17 @@
       height: 1px;
       background: #545454;
       z-index: -1;
+
+      @include lg {
+        top: 48px;
+      }
+
+      @include md {
+        width: 1px;
+        height: 100%;
+        left: 48px;
+        top: 0px;
+      }
     }
   }
 
@@ -66,6 +91,14 @@
     visibility: hidden;
 
     &:last-child {
+      @apply tw-bg-bg-grafit;
+    }
+
+    @include md {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 10px 0;
       @apply tw-bg-bg-grafit;
     }
 
@@ -88,10 +121,19 @@
     width: fit-content;
     padding: 0 20px;
     @apply tw-bg-bg-grafit;
+
+    @include md {
+      padding: 0px;
+      flex-shrink: 0;
+    }
   }
 
   .icon {
     width: 127px;
+
+    @include lg {
+      width: 96px;
+    }
   }
 
   .label {
@@ -100,5 +142,19 @@
     line-height: 1.25;
     padding-left: 20px;
     @apply tw-mt-30 tw-uppercase tw-font-medium;
+
+    @include lg {
+      font-size: 16px;
+    }
+
+    @include md {
+      padding-left: 0px;
+      margin-top: 0;
+      max-width: 225px;
+    }
+
+    @include xs {
+      font-size: 14px;
+    }
   }
 </style>
