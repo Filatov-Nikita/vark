@@ -9,6 +9,7 @@
       </SlideItem>
       <SlideItem label="Документация">
         <DocsList :productDocs="productDocs" />
+        <DocsSlider :productDocs="productDocs" />
       </SlideItem>
     </div>
   </div>
@@ -18,6 +19,7 @@
   import BlockDescription from './BlockDescription.vue';
   import TableAttrs from './TableAttrs.vue';
   import DocsList from './DocsList.vue';
+  import DocsSlider from './DocsSlider.vue';
   import type { ProductItem } from '@/stores/products';
   import type { ProductAttrs } from '@/stores/products/attrs';
   import type { DocItem } from '@/stores/products/docs';

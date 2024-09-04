@@ -22,6 +22,10 @@
     flex-wrap: wrap;
     margin: -20px -13px;
     color: #333333;
+
+    @include sm {
+      display: none;
+    }
   }
 
   .list-item {
