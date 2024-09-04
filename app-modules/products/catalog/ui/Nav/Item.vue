@@ -8,6 +8,7 @@
         ? { params: { category: item.product.category.slug, slug: item.product.slug } }
         : { query: { productCategorySlug: item.product.category.slug, productSlug: item.product.slug } }
     "
+    @click="onClick"
   >
     {{ item.product.name }}
   </NuxtLink>
@@ -28,6 +29,7 @@
             ? { params: { category: child.category.slug, slug: child.slug } }
             : { query: { productCategorySlug: child.category.slug, productSlug: child.slug } }
         "
+        @click="onClick"
       >
         {{ child.name }}
       </NuxtLink>
@@ -51,6 +53,16 @@
   });
 
   const showedItems = ref(hasActiveProduct.value);
+
+  const route = useRoute();
+
+  function onClick() {
+    if(route.name === 'products-category-slug') return;
+    const el = document.querySelector('.catalog');
+    if(el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 </script>
 
 <style scoped lang="scss">
