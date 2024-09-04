@@ -13,7 +13,7 @@
       :categories="categories"
     >
       <template #actions>
-        <BaseButton class="tw-w-full tw-max-w-[234px]" design="red-md" @click="scrollOrder">
+        <BaseButton class="order" design="red-md" @click="scrollOrder">
           Заказать
         </BaseButton>
       </template>
@@ -57,3 +57,14 @@
 
   const { slugs, items, categories } = useProductCatalog(curCategorySlug);
 </script>
+
+<style scoped lang="scss">
+  .order {
+    max-width: 234px;
+    width: 100%;
+
+    @include md {
+      max-width: 100%;
+    }
+  }
+</style>

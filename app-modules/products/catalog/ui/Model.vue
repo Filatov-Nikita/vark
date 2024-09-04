@@ -6,10 +6,6 @@
       :poster="model.poster.url"
       camera-controls
       auto-rotate
-      ar
-      ar-modes="webxr scene-viewer quick-look"
-      tone-mapping="neutral"
-      hadow-intensity="1"
     ></model-viewer>
   </div>
 </template>

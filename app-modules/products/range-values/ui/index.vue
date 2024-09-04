@@ -52,10 +52,24 @@
     padding-top: 90px;
     padding-bottom: 40px;
 
+    @include sm {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
     &__wrap {
       display: flex;
       flex-wrap: wrap;
       column-gap: 100px;
+      row-gap: 40px;
+
+      @include lg {
+        column-gap: 50px;
+      }
+
+      @include md {
+        column-gap: 100px;
+      }
     }
   }
 </style>

@@ -43,6 +43,9 @@
       gap: 30px;
       transition: opacity 300ms;
 
+      @include sm {
+        padding: 20px 0;
+      }
     }
 
     &__head:hover {
@@ -55,6 +58,10 @@
 
     &__body {
       padding-bottom: 25px;
+
+      @include sm {
+        padding-bottom: 20px;
+      }
     }
   }
 

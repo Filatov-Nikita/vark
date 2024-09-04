@@ -45,22 +45,46 @@
 
   .cats {
     margin-bottom: 50px;
+
+    @include md {
+      margin-bottom: 32px;
+    }
   }
 
   .wrap {
     display: flex;
     flex-wrap: wrap;
     column-gap: 110px;
+
+    @include lg {
+      column-gap: 60px;
+    }
   }
 
   .left {
     width: 100%;
     max-width: 450px;
+
+    @include lg {
+      max-width: 360px;
+    }
+
+    @include md {
+      display: none;
+    }
   }
 
   .right {
     width: 100%;
     max-width: 600px;
+
+    @include lg {
+      max-width: 500px;
+    }
+
+    @include md {
+      max-width: 100%;
+    }
   }
 
   .actions {
@@ -69,5 +93,9 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+
+    @include md {
+      padding-top: 30px;
+    }
   }
 </style>

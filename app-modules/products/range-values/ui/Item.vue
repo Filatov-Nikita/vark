@@ -25,10 +25,21 @@
 </script>
 
 <style scoped lang="scss">
+  .item {
+    @include sm {
+      width: 100%;
+    }
+  }
+
   .head {
     display: flex;
     gap: 12px;
     margin-bottom: 14px;
+
+    @include md {
+      margin-bottom: 6px;
+      align-items: center;
+    }
   }
 
   .icon-wrap {
@@ -46,6 +57,10 @@
     padding-top: 2px;
     color: #8D8D8D;
     @apply tw-text-body-m-regular;
+
+    @include md {
+      @apply tw-text-body-s-regular;
+    }
   }
 
   .range {
@@ -54,9 +69,18 @@
 
   .label {
     @apply tw-text-body-m-regular;
+
+    @include md {
+      @apply tw-text-body-s-regular;
+    }
   }
 
   .value {
     @apply tw-text-h2-extra-bold;
+
+    @include md {
+      font-size: 40px;
+      line-height: 50px;
+    }
   }
 </style>

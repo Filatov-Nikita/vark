@@ -39,5 +39,10 @@
 
   .name {
     @apply tw-text-body-m-bold;
+
+    @include sm {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 </style>

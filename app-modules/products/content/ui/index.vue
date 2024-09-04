@@ -32,5 +32,9 @@
 <style scoped lang="scss">
   .content {
     padding-bottom: 100px;
+
+    @include sm {
+      padding-bottom: 70px;
+    }
   }
 </style>

@@ -12,7 +12,7 @@
   >
     <template #actions>
       <BaseButton
-        class="tw-w-full tw-max-w-[234px]"
+        class="readmore"
         design="dark-md"
         :to="{
           name: 'products-category-slug',
@@ -72,6 +72,13 @@
   const { curProduct, curModel} = useCurrentProduct(curProductSlug);
 </script>
 
-<style>
+<style scoped lang="scss">
+  .readmore {
+    width: 100%;
+    max-width: 234px;
 
+    @include md {
+      max-width: 100%;
+    }
+  }
 </style>

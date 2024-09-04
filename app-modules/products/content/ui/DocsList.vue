@@ -27,5 +27,13 @@
   .list-item {
     margin: 20px 13px;
     width: calc(25% - 26px);
+
+    @include lg {
+      width: calc(33.3% - 26px);
+    }
+
+    @include md {
+      width: calc(50% - 26px);
+    }
   }
 </style>
