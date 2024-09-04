@@ -41,6 +41,10 @@
       margin: 10px;
       visibility: hidden;
 
+      @include md {
+        width: calc(100% - 20px);
+      }
+
       &--fade {
         visibility: visible;
         animation: fadeInDown;

@@ -30,6 +30,10 @@
     transition: background-color 200ms;
     @apply tw-text-white;
 
+    @include sm {
+      padding: 20px 24px 38px 20px;
+    }
+
     &:hover {
       @apply tw-bg-primary;
     }
@@ -39,7 +43,14 @@
     }
 
     &__text {
+      color: #EAEAEA;
       @apply tw-mt-12 tw-text-body-m-regular;
+
+      @include sm {
+        font-size: 14px;
+        line-height: 17px;
+        @apply tw-mt-8;
+      }
     }
 
     &__icon-wrap {
@@ -48,6 +59,12 @@
       background: #404040;
       margin-bottom: 24px;
       padding: 17px;
+
+      @include sm {
+        padding: 12px;
+        border-radius: 7px;
+        @apply tw-mb-16;
+      }
     }
 
     &:hover &__icon-wrap {
@@ -58,6 +75,11 @@
       width: 36px;
       height: 36px;
       @apply tw-fill-primary;
+
+      @include sm {
+        width: 26px;
+        height: 26px;
+      }
     }
   }
 </style>

@@ -15,5 +15,10 @@
   .about {
     padding-top: 94px;
     padding-bottom: 70px;
+
+    @include sm {
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
   }
 </style>
