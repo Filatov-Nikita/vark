@@ -16,6 +16,10 @@
   const section = ref<HTMLElement | null>(null);
   const itemsRef = ref<any[]>([]);
 
+  let threshold = 0.7;
+
+  if(import.meta.client && window.screen.width <= 719.9) threshold = 0.2;
+
   useIntersect(
     section,
     () => {
@@ -26,7 +30,7 @@
       });
     },
     () => {},
-    { threshold: 0.7, once: true }
+    { threshold, once: true }
   );
 </script>
 
