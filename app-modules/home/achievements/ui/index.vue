@@ -65,6 +65,15 @@
       justify-content: space-between;
       row-gap: 60px;
 
+      @include lg {
+        column-gap: 100px;
+        justify-content: flex-start;
+      }
+
+      @include md {
+        column-gap: 120px;
+      }
+
       @include sm {
         row-gap: 30px;
       }
@@ -73,6 +82,10 @@
 
   .achive-item {
     @apply tw-text-white;
+
+    @include sm {
+      width: 100% !important;
+    }
 
     &:nth-child(1) {
       width: 280px;
@@ -88,10 +101,6 @@
 
     &:nth-child(4) {
       width: 162px;
-    }
-
-    @include sm {
-      width: 100%;
     }
 
     &__label {
