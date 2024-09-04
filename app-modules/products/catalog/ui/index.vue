@@ -4,7 +4,8 @@
       <Categories class="cats" :items="categories.slice(0, 1)" :slugs="slugs" :activeSlug="curCategorySlug" />
       <div class="wrap">
         <aside class="left">
-          <NavItems :items="items" :activeProductSlug="curProductSlug" />
+          <Select class="nav-sm" :options="products" :modelValue="product" />
+          <NavItems class="nav" :items="items" :activeProductSlug="curProductSlug" />
         </aside>
         <div class="right">
           <ClientOnly>
@@ -23,6 +24,7 @@
   import Categories from './Categories.vue';
   import NavItems from './Nav/Items.vue';
   import Model from './Model.vue';
+  import Select from './Select.vue';
   import type { GroupItem } from '../model/useGroupItems';
   import type { ProductItem, Category } from '@/stores/products';
   import type { ModelItem } from '@/stores/products/models';
@@ -35,6 +37,7 @@
     items: GroupItem[],
     curCategorySlug: string,
     curProductSlug: string,
+    products: ProductItem[],
   }>();
 </script>
 
@@ -70,7 +73,22 @@
     }
 
     @include md {
+      max-width: 100%;
+    }
+  }
+
+  .nav {
+    @include md {
       display: none;
+    }
+  }
+
+  .nav-sm {
+    display: none;
+    margin-bottom: 30px;
+
+    @include md {
+      display: block;
     }
   }
 

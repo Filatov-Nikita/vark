@@ -19,5 +19,6 @@ export default function(curCategorySlug: Ref<string>) {
     slugs,
     items,
     categories,
+    products: productsStore.products,
   }
 }

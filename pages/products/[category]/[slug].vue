@@ -4,6 +4,7 @@
       <h1 class="h1 h-mb-60">Продукция</h1>
     </div>
     <Catalog
+      :products="products"
       :product="curProduct"
       :slugs="slugs"
       :curProductSlug="curProductSlug"
@@ -55,7 +56,7 @@
     curDocs,
   } = useCurrentProduct(curProductSlug);
 
-  const { slugs, items, categories } = useProductCatalog(curCategorySlug);
+  const { slugs, items, categories, products } = useProductCatalog(curCategorySlug);
 </script>
 
 <style scoped lang="scss">

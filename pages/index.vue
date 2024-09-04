@@ -2,6 +2,7 @@
   <MainScreen />
   <Achievements />
   <Catalog
+    :products="products"
     :product="curProduct"
     :slugs="slugs"
     :curProductSlug="curProductSlug"
@@ -68,7 +69,7 @@
     set() {}
   });
 
-  const { slugs, items, categories } = useProductCatalog(curCategorySlug);
+  const { slugs, items, categories, products } = useProductCatalog(curCategorySlug);
   const { curProduct, curModel} = useCurrentProduct(curProductSlug);
 </script>
 
