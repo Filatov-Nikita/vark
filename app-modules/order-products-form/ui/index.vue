@@ -103,6 +103,10 @@
 
     &__form {
       flex-basis: 545px;
+
+      @include md {
+        flex-basis: 100%;
+      }
     }
   }
 </style>
