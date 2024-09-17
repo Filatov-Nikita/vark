@@ -119,6 +119,10 @@
   .link {
     @apply tw-text-body-m-extra-bold tw-text-white tw-inline-block;
 
+    &:hover {
+      opacity: 0.8;
+    }
+
     @include sm {
       font-size: 16px;
       line-height: 20px;
@@ -169,6 +173,10 @@
   .email {
     @apply tw-text-text-gray tw-text-body-m-regular tw-inline-block;
 
+    &:hover {
+      opacity: 0.8;
+    }
+
     @include sm {
       @apply tw-text-body-s-regular;
     }
@@ -185,7 +193,13 @@
   }
 
   .dir-tab {
+    transition: transform 150ms;
     @apply tw-text-body-m-regular tw-text-text-gray tw-text-left;
+
+    &:hover {
+      transform: scale(1.05);
+      @apply tw-text-white;
+    }
 
     @include sm {
       @apply tw-text-body-s-regular;

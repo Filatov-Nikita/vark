@@ -78,6 +78,11 @@
   .achive-item {
     @apply tw-text-white;
 
+    &:hover &__value {
+      transform: scale(1.05);
+      @apply tw-text-primary-hover;
+    }
+
     @include sm {
       width: 100% !important;
     }
@@ -111,6 +116,7 @@
       line-height: 1.2;
       font-weight: 800;
       letter-spacing: 0.01em;
+      transition: transform 300ms;
 
       @include xs {
         font-size: 50px;

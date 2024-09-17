@@ -2,7 +2,13 @@
   <section class="order-form">
     <div class="wrapper">
       <div class="order-form__wrap">
-        <div ref="logo" class="order-form__logo">
+        <div
+          ref="logo"
+          class="order-form__logo"
+          @mouseenter="toggleRotate"
+          @transitionstart="rotatePending = true"
+          @transitionend="rotatePending = false"
+        >
           <img width="393" height="403" src="./assets/logo.svg" alt="логотип Варк" loading="lazy">
         </div>
         <div class="order-form__form">
@@ -20,13 +26,26 @@
 
   const logo = ref<HTMLElement | null>(null);
 
+  const rotateClass = 'order-form__logo--rotate';
+
+  const rotatePending = ref(false);
+
+  function toggleRotate() {
+    if(!logo.value || rotatePending.value) return;
+    if(logo.value.classList.contains(rotateClass)) {
+      logo.value.classList.remove(rotateClass);
+    } else {
+      logo.value.classList.add(rotateClass);
+    }
+  }
+
   useIntersect(
     logo,
     (entry) => {
-      entry.target.classList.add('order-form__logo--rotate');
+      toggleRotate();
     },
     (entry) => {
-      entry.target.classList.remove('order-form__logo--rotate');
+      toggleRotate();
     },
     { threshold: 0.8 }
   );
@@ -82,9 +101,9 @@
 
     &__logo {
       flex-basis: 392px;
+      transition: transform 500ms;
 
       &--rotate {
-        transition: transform 500ms;
         transform: rotateY(180deg);
       }
 

@@ -1,7 +1,7 @@
 <template>
   <article class="item" role="button" @click="showedModal = true">
     <div class="img-wrap">
-      <img :width="item.preview.width" :height="item.preview.height" :src="item.preview.url" />
+      <img class="photo" :width="item.preview.width" :height="item.preview.height" :src="item.preview.url" />
     </div>
     <h2 class="name">{{ item.name }}</h2>
     <BaseModal class="img-modal" v-model="showedModal">
@@ -26,6 +26,14 @@
   .item {
     margin: 20px 13px;
     width: calc(25% - 26px);
+
+    &:hover .name {
+      opacity: 0.8;
+    }
+
+    &:hover .photo {
+      transform: scale(1.02);
+    }
 
     @include lg {
       width: calc(33.3% - 26px);
@@ -57,9 +65,11 @@
     border: 1px solid #EAEAEA;
     @apply tw-bg-white;
 
-    img {
-      width: 100%;
-    }
+  }
+
+  .photo {
+    transition: transform 150ms;
+    width: 100%;
   }
 
   .big-img-wrap {

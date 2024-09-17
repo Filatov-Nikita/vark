@@ -1,32 +1,50 @@
 export default [
   {
     name: 'ГАЗПРОМ',
-    count: '>18 000',
-    sum: '2 млрд ₽',
+    count: 18000,
+    sum: {
+      val: 2,
+      after: 'млрд ₽',
+    },
   },
   {
     name: 'Роснефть',
-    count: '>70 000',
-    sum: '6,6 млрд ₽',
+    count: 70000,
+    sum: {
+      val: 6.6,
+      after: 'млрд ₽',
+    },
   },
   {
     name: 'ЛУКОЙЛ',
-    count: '>24 000',
-    sum: '3,8 млрд ₽',
+    count: 24000,
+    sum: {
+      val: 3.8,
+      after: 'млрд ₽',
+    },
   },
   {
     name: 'газпромнефть',
-    count: '>17 000',
-    sum: '1,5 млрд ₽',
+    count: 17000,
+    sum: {
+      val: 1.5,
+      after: 'млрд ₽',
+    },
   },
   {
     name: 'новатэк',
-    count: '>6 500',
-    sum: '500 млн ₽',
+    count: 6500,
+    sum: {
+      val: 500,
+      after: 'млн ₽',
+    },
   },
   {
     name: 'сибур',
-    count: '>1 000',
-    sum: '163 млн ₽',
+    count: 1000,
+    sum: {
+      val: 163,
+      after: 'млн ₽',
+    },
   },
 ];

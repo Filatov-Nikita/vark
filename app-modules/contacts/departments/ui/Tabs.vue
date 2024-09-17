@@ -43,7 +43,13 @@
   }
 
   .tab {
+    transition: transform 150ms;
     @apply tw-text-text-gray tw-text-body-m-regular tw-text-left;
+
+    &:hover {
+      transform: scale(1.05);
+      @apply tw-text-white;
+    }
 
     @include sm {
       font-size: 14px;

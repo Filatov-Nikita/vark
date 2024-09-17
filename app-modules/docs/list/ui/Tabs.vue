@@ -40,6 +40,10 @@
     flex-shrink: 0;
     @apply tw-border tw-border-solid tw-border-text-gray tw-text-body-m-regular tw-text-text-gray;
 
+    &:hover {
+      opacity: 0.8;
+    }
+
     @include sm {
       padding: 16px;
       font-size: 14px;
@@ -47,6 +51,7 @@
     }
 
     &--active {
+      opacity: 1 !important;
       @apply tw-bg-white tw-text-text-dark tw-border-white;
     }
   }

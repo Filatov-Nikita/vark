@@ -15,7 +15,7 @@
               <a :href="`tel:${customer.phone}`">{{ customer.phone }}</a>
               <span class="phone-cap" v-if="customer.phoneCap">{{ customer.phoneCap }}</span>
             </div>
-            <a v-if="customer.email" class="email" :href="`mmailto:${customer.email}`">{{ customer.email }}</a>
+            <a v-if="customer.email" class="email" :href="`mailto:${customer.email}`">{{ customer.email }}</a>
           </div>
         </li>
       </ul>
@@ -89,6 +89,12 @@
   .phone {
     display: flex;
     gap: 5px;
+
+    a {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
 
   .phone-cap {
@@ -99,6 +105,10 @@
     display: block;
     width: 100%;
     @apply tw-text-text-gray tw-mt-12;
+
+    &:hover {
+      opacity: 0.8;
+    }
 
     @include sm {
       margin-top: 4px;

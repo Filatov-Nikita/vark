@@ -25,6 +25,12 @@
     width: fit-content;
     @apply tw-text-text-gray;
 
+    a {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
     @include sm {
       font-size: 14px;
       line-height: 17px;

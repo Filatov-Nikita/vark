@@ -8,6 +8,10 @@
   .logo {
     display: block;
 
+    &:hover {
+      opacity: 0.8;
+    }
+
     &__img {
       width: 100%;
     }

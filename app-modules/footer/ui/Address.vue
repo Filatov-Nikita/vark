@@ -2,11 +2,15 @@
   <div>
     <div class="address-row">
       <div class="address-row__label">Адрес</div>
-      <div class="address-row__body">{{ address }}</div>
+      <NuxtLink class="address-row__body" :to="{ name: 'contacts', hash: '#map', query: { map_index: 0 } }">
+        {{ address }}
+      </NuxtLink>
     </div>
     <div class="address-row">
       <div class="address-row__label">Адрес производства</div>
-      <div class="address-row__body">{{ manufactureAddress }}</div>
+      <NuxtLink class="address-row__body" :to="{ name: 'contacts', hash: '#map', query: { map_index: 1 } }">
+        {{ manufactureAddress }}
+      </NuxtLink>
     </div>
   </div>
 </template>
@@ -30,7 +34,11 @@
     }
 
     &__body {
-      @apply tw-text-body-m-regular;
+      @apply tw-text-body-m-regular tw-block tw-w-full;
+
+      &:hover {
+        @apply tw-text-text-gray-hover;
+      }
 
       @include sm {
         @apply tw-text-body-s-regular;

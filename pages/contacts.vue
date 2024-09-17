@@ -34,6 +34,10 @@
       padding-bottom: 16px;
       font-weight: 400;
       color: #5D5D5D;
+
+      &:hover {
+        @apply tw-text-white;
+      }
     }
 
     :deep(.tab-item--active) {

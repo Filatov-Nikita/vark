@@ -1,5 +1,5 @@
 <template>
-  <div class="map">
+  <div class="map" id="map">
     <ul class="points">
       <li
         class="point-li"
@@ -58,7 +58,18 @@
 
   const map = shallowRef<null | YMap>(null);
 
-  const curInd = ref(0);
+  const route = useRoute();
+
+  const curInd = ref<number>(0);
+
+  function getIndex() {
+    const v = parseInt(route.query.map_index as string);
+    return isNaN(v) ? 0 : v;
+  }
+
+  watch(() => route.query.map_index, () => {
+    curInd.value = getIndex();
+  }, { immediate: true });
 </script>
 
 <style scoped lang="scss">
@@ -91,6 +102,11 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    width: 100%;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   .icon {

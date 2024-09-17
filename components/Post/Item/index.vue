@@ -26,6 +26,18 @@
   .post {
     display: block;
 
+    &:hover &__img {
+      transform: scale(1.05);
+    }
+
+    &:hover &__title {
+      opacity: 0.6;
+    }
+
+    &:hover &__date {
+      opacity: 0.8;
+    }
+
     &__img-wrap {
       border-radius: 20px;
       overflow: hidden;
@@ -37,6 +49,7 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
+      transition: transform 150ms;
     }
 
     &__date {
