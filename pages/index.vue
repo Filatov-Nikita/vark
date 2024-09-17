@@ -26,7 +26,6 @@
   </Catalog>
   <About />
   <Gallery />
-  <Quality />
   <Map />
   <Clients />
   <Posts />
@@ -36,7 +35,6 @@
 
 <script lang="ts" setup>
   import Achievements from '@/app-modules/home/achievements/ui/index.vue';
-  import Quality from '@/app-modules/home/quality/ui/index.vue';
   import Clients from '@/app-modules/home/clients/ui/index.vue';
   import MainScreen from '@/app-modules/home/main-screen/ui/index.vue';
   import OrderProductsForm from '@/app-modules/order-products-form/ui/index.vue';

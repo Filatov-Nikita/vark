@@ -4,15 +4,15 @@ export default {
     label: 'Площадь предприятия',
   },
   years: {
-    value: '16 +',
-    label: 'Лет на рынке',
+    value: '20',
+    label: 'Сред применения',
   },
   produceSquare: {
     value: '75 000',
     label: 'Производственные площади',
   },
   clients: {
-    value: '1 000+',
-    label: 'Постоянных клиентов',
+    value: '14',
+    label: 'Товарных групп',
   },
 };

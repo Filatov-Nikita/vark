@@ -2,6 +2,7 @@
   <MainScreen />
   <Perfomance />
   <Misson />
+  <Quality />
   <Values />
   <Politics />
   <ManagmentSystem />
@@ -16,4 +17,5 @@
   import ManagmentSystem from '@/app-modules/about/managment-system/ui/index.vue';
   import Values from '@/app-modules/about/values/ui/index.vue';
   import Work from '@/app-modules/about/work/ui/index.vue';
+  import Quality from '@/app-modules/home/quality/ui/index.vue';
 </script>

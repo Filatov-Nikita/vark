@@ -11,7 +11,7 @@
           <p class="label">{{ values.years.label }}</p>
         </article>
         <article class="item produce-square">
-          <p class="value">{{ values.produceSquare.value }}</p>
+          <p class="value">{{ values.produceSquare.value }} <span class="m2">м<sup>2</sup></span></p>
           <p class="label">{{ values.produceSquare.label }}</p>
         </article>
       </div>
@@ -85,18 +85,30 @@
 
   .years {
     width: calc(38% - 10px);
+
+    @include sm {
+      width: 100%;
+    }
   }
 
   .produce-square {
     width: calc(62% - 10px);
+
+    @include sm {
+      width: 100%;
+    }
   }
 
   .item {
     border-radius: 20px;
     background: #2B2B2B;
     padding: 30px 16px;
-    padding-left: 45px;
+    padding-left: 40px;
     transition: background-color 200ms;
+
+    @include lg {
+      padding-left: 30px;
+    }
 
     @include md {
       padding-left: 24px;
@@ -115,8 +127,6 @@
     }
 
     &.clients-square {
-      padding-left: 32px;
-
       @include md {
         padding-left: 24px;
       }
@@ -128,6 +138,10 @@
 
     &.produce-square {
       padding-left: 40px;
+
+      @include lg {
+        padding-left: 30px;
+      }
 
       @include md {
         padding-left: 24px;
@@ -146,7 +160,7 @@
     letter-spacing: 0.03em;
 
     @include lg {
-      font-size: 70px;
+      font-size: 62px;
     }
 
     @include md {
@@ -156,10 +170,6 @@
     @include sm {
       font-size: 40px;
     }
-
-    @include xs {
-      font-size: 32px;
-    }
   }
 
   .label {
@@ -168,16 +178,20 @@
     line-height: 1.2;
     @apply tw-text-text-gray;
 
+    @include lg {
+      font-size: 18px;
+    }
+
     @include sm {
       font-size: 16px;
     }
 
-    @include xs {
-      font-size: 14px;
-    }
-
     &--right {
       text-align: right;
+
+      @include sm {
+        text-align: left;
+      }
     }
   }
 
@@ -190,10 +204,6 @@
 
     @include sm {
       font-size: 32px;
-    }
-
-    @include xs {
-      font-size: 24px;
     }
   }
 </style>

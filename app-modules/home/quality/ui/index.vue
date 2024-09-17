@@ -44,8 +44,8 @@
 
 <style scoped lang="scss">
   .quality {
-    padding-top: 120px;
-    padding-bottom: 60px;
+    padding-top: 90px;
+    padding-bottom: 80px;
 
     @include sm {
       padding-top: 80px;

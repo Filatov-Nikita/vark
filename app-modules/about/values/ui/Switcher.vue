@@ -93,6 +93,8 @@
     }
 
     &__img-wrap {
+      border-radius: 10px;
+      overflow: hidden;
       margin-bottom: 20px;
     }
 
