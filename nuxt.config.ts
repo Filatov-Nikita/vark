@@ -22,6 +22,10 @@ export default defineNuxtConfig({
   },
   appConfig: {
     apiPrefix: process.env.API_PREFIX,
+    mimes: {
+      pdf: 'application/pdf',
+      docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    },
   },
   pinia: {
     storesDirs: ['./stores/**'],

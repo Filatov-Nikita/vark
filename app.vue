@@ -1,4 +1,7 @@
 <template>
+  <ClientOnly>
+    <Alerts />
+  </ClientOnly>
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
@@ -9,5 +12,5 @@
     titleTemplate: (titleChunk) => {
       return  titleChunk ? `Варк | ${titleChunk}` : 'Варк - производство трубопроводной арматуры';
     },
-  })
+  });
 </script>

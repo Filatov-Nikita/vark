@@ -20,6 +20,9 @@ export default {
       'text-gray': '#9D9D9D',
       'text-gray-hover': '#979797',
       'text-dark': '#0F0F0F',
+      'error': '#F13F36',
+      'warning': '#FEBF22',
+      'success': '#4FBA78',
     },
     fontSize: {
       'body-s-regular': ['16px', {
