@@ -2,20 +2,49 @@
   <article class="form white-area">
     <h3 class="h3 tw-uppercase">Отклик</h3>
     <p class="subtitle">Заполните данные, прикрепите резюме и мы свяжемся с вами</p>
-    <Form :validation-schema="schema">
+    <Form ref="formRef" :validation-schema="schema" @submit="onSubmit">
       <BaseInput class="inp" design="gray" name="name" placeholder="Имя" />
       <PhoneInput class="inp" design="gray" name="phone" />
-      <BaseFileInput class="file" name="file">Прикрепить резюме</BaseFileInput>
-      <BaseButton class="btn" type="submit">Отправить</BaseButton>
+      <BaseFileInput ref="file" class="file" name="file">Прикрепить резюме</BaseFileInput>
+      <BaseButton class="btn" type="submit" :disabled="sending">Отправить</BaseButton>
       <PolicyAccept design="dark" size="sm" />
     </Form>
   </article>
 </template>
 
 <script setup lang="ts">
-  import validationSchema from '../model/schema';
+  import validationSchema, { type Form as TForm } from '../model/schema';
+  import { Form } from 'vee-validate';
+  import FileInput from '@/components/Base/FileInput/index.vue';
+
+  withDefaults(
+    defineProps<{
+      sending: boolean,
+    }>(),
+    { sending: false },
+  );
+
+  const formRef = ref<InstanceType<typeof Form> | null>(null);
+  const file = ref<InstanceType<typeof FileInput> | null>(null);
+
+  const emit = defineEmits<{
+    (event: 'submit', form: TForm): void,
+  }>();
 
   const schema = validationSchema();
+
+  function onSubmit(form: unknown) {
+    emit('submit', form as TForm);
+  }
+
+  function reset() {
+    file.value?.reset();
+    formRef.value?.resetForm();
+  }
+
+  defineExpose({
+    reset,
+  });
 </script>
 
 <style scoped lang="scss">

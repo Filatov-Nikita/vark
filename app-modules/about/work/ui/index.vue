@@ -8,7 +8,7 @@
           <p class="tw-max-w-[548px]" v-html="texts[1]"></p>
         </div>
         <div class="right">
-          <Form />
+          <Form ref="formRef" :sending="sending" @submit="onSubmit" />
         </div>
       </div>
     </div>
@@ -17,11 +17,38 @@
 
 <script setup lang="ts">
   import Form from './Form.vue';
+  import type { Form as TForm } from '../model/schema';
 
   const texts = [
     'Высококвалифицированные специалисты - одна из&nbsp;главных составляющих успешного развития предприятия.<br>Наша цель - создавать условия для&nbsp;их профессионального роста и&nbsp;самореализации.',
     'Наша компания развивается устойчивыми темпами из&nbsp;года в&nbsp;год. Мы&nbsp;в&nbsp;поиске сотрудников самых разных профессий - от&nbsp;инженеров, механиков, фрезеровщиков до&nbsp;начальников производства, исполнительных директоров.',
   ];
+
+  const sending = ref(false);
+  const formRef = ref<InstanceType<typeof Form> | null>(null);
+
+  async function onSubmit(form: TForm) {
+    sending.value = true;
+    try {
+      await $fetch('vacancy', {
+        method: 'POST',
+        baseURL: useAppConfig().apiPrefix,
+        body: jsonFormData(form),
+      });
+      useAlertsStore().create({
+        type: 'success',
+        message: 'Ваш отклик был успешно отправлен!',
+      });
+      formRef.value?.reset();
+    } catch(e) {
+      useAlertsStore().create({
+        type: 'error',
+        message: 'При отправке формы произошла ошибка!',
+      });
+    } finally {
+      sending.value = false;
+    }
+  }
 </script>
 
 <style scoped lang="scss">

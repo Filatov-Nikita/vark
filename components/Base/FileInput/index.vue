@@ -7,17 +7,30 @@
       </span>
       <span v-else>{{ value.name }}</span>
     </div>
-    <input class="file-inp__input" type="file" @change="handleChange" />
+    <input ref="input" class="file-inp__input" type="file" @change="handleChange" />
     <div v-if="errorMessage" class="file-inp__error">{{ errorMessage }}</div>
   </Field>
 </template>
 
 <script setup lang="ts">
+  import { Field } from 'vee-validate';
+
   defineProps<{
     name: string,
   }>();
 
-  const field = ref<any>(null);
+  const input = ref<HTMLInputElement | null>(null);
+
+  const field = ref<InstanceType<typeof Field> | null>(null);
+
+  function reset() {
+    field.value?.reset();
+    if(input.value) input.value.value = '';
+  };
+
+  defineExpose({
+    reset,
+  });
 </script>
 
 <style scoped lang="scss">
