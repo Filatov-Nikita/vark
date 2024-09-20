@@ -14,7 +14,7 @@
         <div class="order-form__form">
           <h2 class="h2">Заказать <span class="tw-text-primary">продукцию</span></h2>
           <p class="order-form__subtitle">Отправьте заявку и мы вышлем на ваш e-mail опросный лист. Заполните его для заказа</p>
-          <Form />
+          <Form ref="formRef" :sending="sending" @submit="onSubmit" />
         </div>
       </div>
     </div>
@@ -23,6 +23,7 @@
 
 <script setup lang="ts">
   import Form from './Form.vue';
+  import type { Form as TForm } from '../model/schema';
 
   const logo = ref<HTMLElement | null>(null);
 
@@ -49,6 +50,33 @@
     },
     { threshold: 0.8 }
   );
+
+  const formRef = ref<InstanceType<typeof Form> | null>(null);
+
+  const sending = ref(false);
+
+  async function onSubmit(form: TForm) {
+    sending.value = true;
+    try {
+      await $fetch('order', {
+        method: 'POST',
+        baseURL: useAppConfig().apiPrefix,
+        body: form,
+      });
+      useAlertsStore().create({
+        type: 'success',
+        message: 'Ваша заявка была успешно отправлена! В течение пары минут на вашу почту поступит опросный лист.',
+      });
+      formRef.value?.reset();
+    } catch(e) {
+      useAlertsStore().create({
+        type: 'error',
+        message: 'При отправке формы произошла ошибка!',
+      });
+    } finally {
+      sending.value = false;
+    }
+  }
 </script>
 
 <style scoped lang="scss">
