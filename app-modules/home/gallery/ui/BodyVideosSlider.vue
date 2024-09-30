@@ -22,21 +22,21 @@
         <BaseIcon name="next" fit />
       </button>
       <SwiperSlide
-        v-for="(image, ind) in images"
+        v-for="(video, ind) in videos"
         class="slide"
       >
-        <img class="image" :width="image.width" :height="image.height" :src="image.url" loading="lazy"/>
+        <video class="image" :src="video.video.url" autoplay controls loop></video>
       </SwiperSlide>
     </Swiper>
   </div>
 </template>
 
 <script setup lang="ts">
-  import type { Image } from '../model/types';
+  import type { Video } from '../model/types';
 
   defineProps<{
     initialSlide: number,
-    images: Image[],
+    videos: Video[],
   }>();
 </script>
 
@@ -51,7 +51,6 @@
   }
 
   .image {
-    border-radius: 20px;
     width: auto;
     height: auto;
     max-height: calc(100vh - 272px);

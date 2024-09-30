@@ -17,9 +17,9 @@
       <SwiperNav class="tw-justify-end tw-mb-8 sw-nav" @prev="swiper.slidePrev()" @next="swiper.slideNext()" />
     </template>
     <SwiperSlide
-      v-for="image in images"
+      v-for="(image, index) in images"
     >
-      <img class="photo" :width="image.width" :height="image.height" :src="image.path" loading="lazy" />
+      <img class="photo" :width="image.width" :height="image.height" :src="image.url" loading="lazy" @click="updateIndex(index)" />
     </SwiperSlide>
   </Swiper>
 </template>
@@ -31,7 +31,15 @@
     images: Image[]
   }>();
 
+  const emit = defineEmits<{
+    (event: 'update:index', ind: number):void,
+  }>();
+
   const swiper = ref<any>(null);
+
+  function updateIndex(ind: number) {
+    emit('update:index', ind);
+  }
 </script>
 
 <style scoped lang="scss">
@@ -43,5 +51,13 @@
 
   .photo {
     border-radius: 20px;
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    cursor: pointer;
+
+    @include sm {
+      height: 230px;
+    }
   }
 </style>

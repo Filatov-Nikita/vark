@@ -3,24 +3,24 @@
     <div class="images">
       <button
         class="image"
-        v-for="(image, ind) in images"
+        v-for="(video, ind) in videos"
         @click="showedIndex = ind"
       >
-        <img class="image__img" :width="image.width" :height="image.height" :src="image.url" loading="lazy" />
+        <img class="image__img" :width="video.preview.width" :height="video.preview.height" :src="video.preview.url" loading="lazy" />
       </button>
     </div>
     <BaseModal :model-value="showedIndex !== null" @update:model-value="showedIndex = null" anim-dir="x" no-off-scroll>
-      <BodyImagesSlider v-if="showedIndex !== null" :initial-slide="showedIndex" :images="images" />
+      <BodyVideosSlider v-if="showedIndex !== null" :initial-slide="showedIndex" :videos="videos" />
     </BaseModal>
   </div>
 </template>
 
 <script setup lang="ts">
-  import type { Image } from '../model/types';
-  import BodyImagesSlider from './BodyImagesSlider.vue';
+  import type { Video } from '../model/types';
+  import BodyVideosSlider from './BodyVideosSlider.vue';
 
   defineProps<{
-    images: Image[],
+    videos: Video[],
   }>();
 
   const showedIndex = ref<number | null>(null);
