@@ -56,6 +56,18 @@
       <div class="col1">Исполнение</div>
       <div class="col2">{{ productAttrs.execution }}</div>
     </div>
+    <div class="row" v-if="productAttrs.tapSeal">
+      <div class="col1">Уплотнение</div>
+      <div class="col2">{{ productAttrs.tapSeal }}</div>
+    </div>
+    <div class="row" v-if="productAttrs.seal">
+      <div class="col1">Уплотнение затвора</div>
+      <div class="col2">{{ productAttrs.seal }}</div>
+    </div>
+    <div class="row" v-if="productAttrs.climat">
+      <div class="col1">Климатическое исполнение</div>
+      <div class="col2">{{ productAttrs.climat }}</div>
+    </div>
     <div class="row" v-if="productAttrs.characteristic">
       <div class="col1">Особенности</div>
       <div class="col2">
