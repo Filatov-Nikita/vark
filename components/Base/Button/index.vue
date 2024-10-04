@@ -9,7 +9,7 @@
 
   type BType = 'submit' | 'button';
 
-  type BDesign = 'red-white-xl' | 'dark-md' | 'outline-md' | 'red-xl' | 'red-md';
+  type BDesign = 'red-white-xl' | 'dark-md' | 'outline-md' | 'red-xl' | 'red-md' | 'dark-xl';
 
   interface Props {
     design?: BDesign,
@@ -127,6 +127,18 @@
       @extend %size-md;
       color: #EDEDED;
       background-color: #333333;
+
+      &:hover {
+        @apply tw-bg-white tw-text-text-dark;
+      }
+    }
+
+    &--dark-xl {
+      @extend %size-xl;
+      padding: 16px 30px;
+      color: #C8C8C8;
+      background-color: #2B2B2B;
+      font-weight: 400;
 
       &:hover {
         @apply tw-bg-white tw-text-text-dark;

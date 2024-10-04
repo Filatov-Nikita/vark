@@ -10,7 +10,10 @@
       <div class="main-screen__wrap">
         <h1 class="h1">{{ title }}</h1>
         <p class="main-screen__subtitle" v-html="subtitle"></p>
-        <BaseButton class="main-screen__order" design="red-white-xl" @click="scrollOrder">Заказать продукцию</BaseButton>
+        <div class="main-screen__actions">
+          <BaseButton class="main-screen__order" design="red-white-xl" @click="scrollOrder">Заказать продукцию</BaseButton>
+          <BaseButton class="main-screen__order" design="dark-xl" :to="{ name: 'video' }">Фильм о компании</BaseButton>
+        </div>
       </div>
     </div>
     <video ref="video" class="main-screen__video" :poster="poster" muted loop autoplay playsinline preload="none">
@@ -117,6 +120,12 @@
       height: 100%;
       z-index: -1;
       background: rgba(0, 0, 0, 0.6);
+    }
+
+    &__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
     }
   }
 </style>
