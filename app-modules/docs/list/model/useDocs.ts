@@ -25,16 +25,6 @@ export default function() {
   const commonDocs: Record<string, DocItem[]> = {
     1: [
       getDocItem(
-        'Свидетельство об аккредитации № ИЛ ЛРИ-02055',
-        'lab/0',
-      ),
-      getDocItem(
-        'Свидетельство об аттестации ЛВиНМК',
-        'lab/1',
-      ),
-    ],
-    2: [
-      getDocItem(
         'Сертификат Р ИСО 45001-2020 (ST.RU.0001.P43470)',
         'managment/0',
       ),
@@ -45,6 +35,20 @@ export default function() {
       getDocItem(
         'Сертификат ГОСТ ИСО 13849-1-2014 и ГОСТ Р МЭК 61508-1-2012',
         'managment/2',
+      ),
+      getDocItem(
+        'Сертификат СТО Газпром 9001 2018 ОГН1 RU 1419 K0009',
+        'managment/3',
+      ),
+    ],
+    2: [
+      getDocItem(
+        'Свидетельство об аккредитации № ИЛ ЛРИ-02055',
+        'lab/0',
+      ),
+      getDocItem(
+        'Свидетельство об аттестации ЛВиНМК',
+        'lab/1',
       ),
     ],
     3: [
