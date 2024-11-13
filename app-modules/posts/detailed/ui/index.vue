@@ -3,7 +3,7 @@
     <div class="date">{{ dt }}</div>
     <h1 class="h3 h-mb-40">{{ post.title }}</h1>
     <div class="img-wrap">
-      <img v-if="post.image" :width="post.image.width" :height="post.image.height" :src="post.image.url" />
+      <img class="photo" v-if="post.image" :width="post.image.width" :height="post.image.height" :src="post.image.url" />
     </div>
     <div class="body" v-html="post.body"></div>
   </div>
@@ -47,6 +47,10 @@
     @include sm {
       margin-bottom: 20px;
     }
+  }
+
+  .photo {
+    width: 100%;
   }
 
   .body {
