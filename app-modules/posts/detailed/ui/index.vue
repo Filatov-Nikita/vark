@@ -50,6 +50,7 @@
   }
 
   .body {
+    white-space: pre-wrap;
     font-size: 18px;
     line-height: 1.4;
 
