@@ -82,13 +82,6 @@ const customers: Record<string, Customer[]> = {
       phoneCap: '(доб. 129)',
       email: 'KHalitovTS@vark.ru',
     },
-    {
-      name: 'Баязитова Алина Салаватовна',
-      position: 'Специалист по продажам',
-      phone: '+7 (347) 226 00 00',
-      phoneCap: '(доб. 168)',
-      email: 'BayazitovaAS@vark.ru',
-    },
   ],
   sibur: [
     generalPhone,
