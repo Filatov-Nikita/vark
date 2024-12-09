@@ -17,6 +17,9 @@
         <BaseButton class="order" design="red-md" @click="scrollOrder">
           Заказать
         </BaseButton>
+        <BaseButtonDownload v-if="curProduct.catalogHref" :href="curProduct.catalogHref">
+          Каталог изделия
+        </BaseButtonDownload>
       </template>
     </Catalog>
     <RangeValues :productAttrs="curAttrs" />

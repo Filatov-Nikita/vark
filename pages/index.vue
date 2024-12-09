@@ -22,6 +22,9 @@
       >
         Подробнее
       </BaseButton>
+      <BaseButtonDownload v-if="curCategory" :href="curCategory.catalogHref">
+        Каталог продукции
+      </BaseButtonDownload>
     </template>
   </Catalog>
   <About />
@@ -69,6 +72,10 @@
 
   const { slugs, items, categories, products } = useProductCatalog(curCategorySlug);
   const { curProduct, curModel} = useCurrentProduct(curProductSlug);
+
+  const curCategory = computed(() => {
+    return categories.value.find(cat => cat.slug === curCategorySlug.value) ?? null;
+  });
 </script>
 
 <style scoped lang="scss">

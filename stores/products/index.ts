@@ -23,6 +23,7 @@ export interface ProductItem {
   category: Category,
   type: ProductType | null,
   fittingType: FittingType | null,
+  catalogHref: string | null,
 };
 
 export const useProductsStore = defineStore('productsStore', () => {
@@ -33,7 +34,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       id: ID.get(),
       name: 'Промышленная арматура',
       slug: 'promyshlennaya-armatura',
-      catalogHref: '#',
+      catalogHref: '/categories-catalogs/promyshlennaya-armatura.pdf',
     },
     {
       id: ID.get(),
@@ -119,6 +120,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: null,
       fittingType: fittingTypesMap.value['zapornaia-otsechnaya'],
+      catalogHref: '/products-catalogs/zadvizhki-klinovyie-stalnyie.pdf',
     },
     {
       id: ID.get(),
@@ -127,6 +129,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: null,
       fittingType: fittingTypesMap.value['zapornaia-otsechnaya'],
+      catalogHref: '/products-catalogs/klapany-zapornyie.pdf',
     },
     {
       id: ID.get(),
@@ -135,6 +138,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: null,
       fittingType: fittingTypesMap.value['obratnaia'],
+      catalogHref: '/products-catalogs/zatvory-obratnyie.pdf',
     },
     {
       id: ID.get(),
@@ -143,6 +147,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: null,
       fittingType: fittingTypesMap.value['zapornaia-zaporno-regulirushaya'],
+      catalogHref: '/products-catalogs/zatvory-diskovyie-povorotnyie-zaslonki.pdf',
     },
     {
       id: ID.get(),
@@ -151,6 +156,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: productTypes.value[0],
       fittingType: fittingTypesMap.value['zapornaia-otsechnaya-regulirushaya-zaporno-regulirushaya'],
+      catalogHref: '/products-catalogs/krany-sharovyie.pdf',
     },
     {
       id: ID.get(),
@@ -159,6 +165,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: productTypes.value[0],
       fittingType: fittingTypesMap.value['zapornaia-otsechnaya-regulirushaya-zaporno-regulirushaya'],
+      catalogHref: '/products-catalogs/krany-sharovyie.pdf',
     },
     {
       id: ID.get(),
@@ -167,6 +174,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: productTypes.value[0],
       fittingType: fittingTypesMap.value['zapornaia-otsechnaya-regulirushaya-zaporno-regulirushaya'],
+      catalogHref: '/products-catalogs/krany-sharovyie.pdf',
     },
     {
       id: ID.get(),
@@ -175,6 +183,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: productTypes.value[0],
       fittingType: fittingTypesMap.value['zapornaia-otsechnaya-regulirushaya-zaporno-regulirushaya'],
+      catalogHref: '/products-catalogs/krany-sharovyie.pdf',
     },
     {
       id: ID.get(),
@@ -183,6 +192,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: productTypes.value[0],
       fittingType: fittingTypesMap.value['zapornaia-otsechnaya-regulirushaya-zaporno-regulirushaya'],
+      catalogHref: '/products-catalogs/krany-sharovyie.pdf',
     },
     {
       id: ID.get(),
@@ -191,6 +201,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: productTypes.value[0],
       fittingType: fittingTypesMap.value['zapornaia-otsechnaya-regulirushaya-zaporno-regulirushaya'],
+      catalogHref: '/products-catalogs/krany-sharovyie.pdf',
     },
     {
       id: ID.get(),
@@ -199,6 +210,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: productTypes.value[0],
       fittingType: fittingTypesMap.value['zapornaia-otsechnaya-regulirushaya-zaporno-regulirushaya'],
+      catalogHref: '/products-catalogs/krany-sharovyie.pdf',
     },
     {
       id: ID.get(),
@@ -207,6 +219,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: productTypes.value[0],
       fittingType: fittingTypesMap.value['zapornaia-otsechnaya-regulirushaya-zaporno-regulirushaya'],
+      catalogHref: '/products-catalogs/krany-sharovyie.pdf',
     },
     {
       id: ID.get(),
@@ -215,6 +228,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: null,
       fittingType: fittingTypesMap.value['priedokhranitielnaia'],
+      catalogHref: '/products-catalogs/klapany-stalnyie-pruzhinnyie-priedokhranitielnyie.pdf',
     },
     {
       id: ID.get(),
@@ -223,6 +237,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: productTypes.value[1],
       fittingType: fittingTypesMap.value['zapornaia-armatura'],
+      catalogHref: '/products-catalogs/zadvizhki-shibiernyie.pdf',
     },
     {
       id: ID.get(),
@@ -231,6 +246,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: productTypes.value[1],
       fittingType: fittingTypesMap.value['zapornaia-armatura'],
+      catalogHref: '/products-catalogs/zadvizhki-shibiernyie.pdf',
     },
     {
       id: ID.get(),
@@ -239,6 +255,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: null,
       fittingType: fittingTypesMap.value['perekluchaushaya-smeshivaushaya'],
+      catalogHref: '/products-catalogs/ustroistva-pieriekliuchaiushchiie.pdf',
     },
     {
       id: ID.get(),
@@ -247,6 +264,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[0],
       type: null,
       fittingType: fittingTypesMap.value['priedokhranitielnaia'],
+      catalogHref: '/products-catalogs/bloki-priedokhranitielnykh-klapanov.pdf',
     },
     {
       id: ID.get(),
@@ -255,6 +273,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[1],
       type: null,
       fittingType: fittingTypesMap.value['zapornaia-otsechnaya-regulirushaya-zaporno-regulirushaya'],
+      catalogHref: null,
     },
     {
       id: ID.get(),
@@ -263,6 +282,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[1],
       type: null,
       fittingType: fittingTypesMap.value['priedokhranitielnaia'],
+      catalogHref: null,
     },
     {
       id: ID.get(),
@@ -271,6 +291,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[1],
       type: null,
       fittingType: fittingTypesMap.value['priedokhranitielnaia'],
+      catalogHref: null,
     },
     {
       id: ID.get(),
@@ -279,6 +300,7 @@ export const useProductsStore = defineStore('productsStore', () => {
       category: categories.value[1],
       type: null,
       fittingType: fittingTypesMap.value['zapornaia-otsechnaya-regulirushaya-zaporno-regulirushaya'],
+      catalogHref: null,
     },
   ]);
 
