@@ -47,15 +47,14 @@ const customers: Record<string, Customer[]> = {
     {
       name: 'Ганеева Эльвира Ильгизовна',
       position: 'Заместитель директора департамента по работе с ПАО НК «Роснефть»',
-      phone: '+7 (987) 100 86 26',
+      phone: '+7 (347) 226 00 00',
       phoneCap: '(доб. 175)',
       email: 'GaneevaEI@vark.ru',
     },
     {
       name: 'Фаузетдинов Тимур Вадимович',
       position: 'Ведущий специалист по продажам департамента по работе с ПАО «НК Роснефть»',
-      phone: '+7 (917) 770 77 82',
-      phoneCap: '(доб. 179)',
+      phone: '+7 (967) 454 80 16',
       email: 'FauzetdinovTV@vark.ru',
     },
   ],
@@ -86,11 +85,10 @@ const customers: Record<string, Customer[]> = {
   sibur: [
     generalPhone,
     {
-      name: 'Черный Денис Николаевич',
+      name: 'Хисамов Ильдар Рифкатович',
       position: 'Директор департамента по работе с ПАО «Сибур»',
-      phone: '+7 (927) 343 22 65',
-      phoneCap: '(доб. 189)',
-      email: 'ChernyDN@vark.ru',
+      phone: '+7 (911) 907 01 49',
+      email: 'HisamovIR@vark.ru',
     },
     {
       name: 'Лаврова Кира Владимировна',
@@ -104,7 +102,7 @@ const customers: Record<string, Customer[]> = {
     {
       name: 'Хисамов Ильдар Рифкатович',
       position: 'Директор по работе с ключевыми клиентами',
-      phone: '+7 (965) 923 61 32',
+      phone: '+7 (911) 907 01 49',
       email: 'HisamovIR@vark.ru',
     },
   ],
@@ -123,8 +121,7 @@ const customers: Record<string, Customer[]> = {
     {
       name: 'Ахунова Альбина Ринатовна',
       position: 'Ведущий специалист по тендерам',
-      phone: '+7 (963) 904 70 49',
-      phoneCap: '(доб. 171)',
+      phone: '',
       email: 'AkhunovaAR@vark.ru',
     },
   ],

@@ -25,9 +25,4 @@ export default [
     email: 'KalininAY@vark.ru',
     position: 'Директор по развитию',
   },
-  {
-    name: 'Связев Антон Олегович',
-    email: 'SvyazevAO@vark.ru',
-    position: 'Директор по качеству',
-  }
 ];
