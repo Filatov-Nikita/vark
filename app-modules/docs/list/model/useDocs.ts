@@ -40,6 +40,14 @@ export default function() {
         'Сертификат СТО Газпром 9001 2018 ОГН1 RU 1419 K0009',
         'managment/3',
       ),
+      getDocItem(
+        'Сертификат ИНТИ (INTI.QS.S.QS.1-07-2024-57)',
+        'managment/4',
+      ),
+      getDocItem(
+        'Сертификат ОДР Газпром (ОГН1.RU.1419.00008)',
+        'managment/5',
+      ),
     ],
     2: [
       getDocItem(

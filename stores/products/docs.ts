@@ -68,10 +68,10 @@ export const useProductsDocsStore = defineStore('productsDocsStore', () => {
         'Сертификат ИНТИ (INTI.QS.PS.20-12-2023-488)',
         'zadvizhki-klinovyie-stalnyie/0',
       ),
-      getDocItem(
-        'Сертификат ИНТЕРГАЗСЕРТ (ОГН4.RU.1102.В01270)',
-        'zadvizhki-klinovyie-stalnyie/1',
-      ),
+      // getDocItem(
+      //   'Сертификат ИНТЕРГАЗСЕРТ (ОГН4.RU.1102.В01270)',
+      //   'zadvizhki-klinovyie-stalnyie/1',
+      // ),
       getDocItem(
         'Декларация ТР ТС 010 (ЕАЭС N RU Д-RU.АБ53.В.00825_20)',
         'zadvizhki-klinovyie-stalnyie/2',
@@ -140,10 +140,10 @@ export const useProductsDocsStore = defineStore('productsDocsStore', () => {
         'Сертификат ИНТИ (INTI.QS.PS.20-12-2023-490)',
         'zatvory-obratnyie/0',
       ),
-      getDocItem(
-        'Сертификат ИНТЕРГАЗСЕРТ (ОГН4.RU.1106.В00994)',
-        'zatvory-obratnyie/1',
-      ),
+      // getDocItem(
+      //   'Сертификат ИНТЕРГАЗСЕРТ (ОГН4.RU.1106.В00994)',
+      //   'zatvory-obratnyie/1',
+      // ),
       getDocItem(
         'Декларация ТР ТС 010 (ЕАЭС N RU Д-RU.РА01.В.95935_20)',
         'zatvory-obratnyie/2',
@@ -288,14 +288,14 @@ export const useProductsDocsStore = defineStore('productsDocsStore', () => {
         'Сертификат ТР ТС 032 (ЕАЭС RU C-RU.АБ53.В.00864_21)',
         'zadvizhki-shibiernyie-zms/3',
       ),
-      getDocItem(
-        'Сертификат климатика (Серия 001 № 555)',
-        'zadvizhki-shibiernyie-zms/4',
-      ),
-      getDocItem(
-        'Сертификат сейсмостойкость (Серия 001 №554)',
-        'zadvizhki-shibiernyie-zms/5',
-      ),
+      // getDocItem(
+      //   'Сертификат климатика (Серия 001 № 555)',
+      //   'zadvizhki-shibiernyie-zms/4',
+      // ),
+      // getDocItem(
+      //   'Сертификат сейсмостойкость (Серия 001 №554)',
+      //   'zadvizhki-shibiernyie-zms/5',
+      // ),
     ],
     'zadvizhki-shibiernyie-zsh': [
       getDocItem(
