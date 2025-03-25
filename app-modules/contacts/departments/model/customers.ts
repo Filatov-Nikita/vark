@@ -17,7 +17,7 @@ const customers: Record<string, Customer[]> = {
     {
       name: 'Горбань Андрей Алексеевич',
       position: 'Директор департамента',
-      phone: '+7 (927) 398 68 88',
+      phone: '+7 (347) 226 00 00',
       email: 'GorbanAA@vark.ru',
     },
     {
