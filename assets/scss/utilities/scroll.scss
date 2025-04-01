@@ -1,0 +1,14 @@
+.scroll-y::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.scroll-y::-webkit-scrollbar-track {
+  border-radius: 8px;
+  @apply tw-bg-white;
+}
+
+.scroll-y::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  @apply tw-bg-primary;
+}

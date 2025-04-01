@@ -15,7 +15,7 @@ function getDocItem(name: string, baseUrl: string): DocItem {
 export default function() {
   const tabs = [
     'Разрешительная документация',
-    'Система менеджмента качества',
+    'Интегрированная система менеджмента качества',
     'Лаборатория',
     'Патенты',
   ];

@@ -38,7 +38,7 @@
     padding: 14px 30px;
     border-radius: 20px;
     flex-shrink: 0;
-    @apply tw-border tw-border-solid tw-border-text-gray tw-text-body-m-regular tw-text-text-gray;
+    @apply tw-border tw-border-solid tw-border-text-gray tw-text-body-s-regular tw-text-text-gray;
 
     &:hover {
       opacity: 0.8;
