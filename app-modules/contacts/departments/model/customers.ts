@@ -90,12 +90,6 @@ const customers: Record<string, Customer[]> = {
       phone: '+7 (911) 907 01 49',
       email: 'HisamovIR@vark.ru',
     },
-    {
-      name: 'Лаврова Кира Владимировна',
-      position: 'Ведущий менеджер',
-      phone: '+7 (937) 351 23 35',
-      email: 'LavrovaKV@vark.ru',
-    },
   ],
   clients: [
     generalPhone,
