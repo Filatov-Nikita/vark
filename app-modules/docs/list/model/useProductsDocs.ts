@@ -3,7 +3,8 @@ import type { DocItem } from '@/stores/products/docs';
 
 export default function(products: Ref<ProductItem[]>, productDocs: Record<string, DocItem[]>) {
   const options = computed(() => {
-    return products.value.map(product => product.name);
+    return products.value.map(product => product.name)
+      .filter(name => !(name.endsWith('специальные') && name.indexOf('шаровые') === -1));
   });
 
   const curProduct = ref(options.value[0]);

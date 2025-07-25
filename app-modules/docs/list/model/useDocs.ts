@@ -37,6 +37,10 @@ export default function() {
         'managment/2',
       ),
       getDocItem(
+        'Сертификат ГОСТ Р ИСО 9001-2015 (ISO 9001 2015) и СТО Газпром 9001-2018 (СМК.ИЭ.RU.01221.24)',
+        'managment/6',
+      ),
+      getDocItem(
         'Сертификат СТО Газпром 9001 2018 ОГН1 RU 1419 K0009',
         'managment/3',
       ),
