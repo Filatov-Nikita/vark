@@ -119,6 +119,23 @@ const customers: Record<string, Customer[]> = {
       email: 'AkhunovaAR@vark.ru',
     },
   ],
+  service: [
+    generalPhone,
+    {
+      name: 'Фриновский Антон Александрович',
+      position: 'Директор по развитию сервисного направления',
+      phone: '+7 8412 48-00-58',
+      phoneCap: '(доб. 201)',
+      email: 'FrinovskyAA@vark.ru',
+    },
+    {
+      name: 'Катаев Евгений Викторович',
+      position: 'Заместитель директора по развитию сервисных услуг',
+      phone: '+7 8412 48-00-58',
+      phoneCap: '(доб. 204)',
+      email: 'KataevEV@vark.ru',
+    },
+  ],
 };
 
 export default customers;
