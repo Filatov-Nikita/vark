@@ -45,7 +45,7 @@ export default function() {
         'managment/3',
       ),
       getDocItem(
-        'Сертификат ИНТИ (INTI.QS.S.QS.1-07-2024-57)',
+        'Заключение (INTI.QS.S.QS.1-07-2024-57)',
         'managment/4',
       ),
       getDocItem(

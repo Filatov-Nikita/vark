@@ -20,29 +20,29 @@ function getDocItem(name: string, baseUrl: string): DocItem {
 
 const sharovyie = [
   getDocItem(
-    'Сертификат ИНТИ (INTI.QS.PS.20-12-2023-493)',
+    'Заключение (INTI.QS.PS.20-12-2023-493)',
     'krany-sharovyie/0',
   ),
   getDocItem(
     'Сертификат ИНТЕРГАЗСЕРТ (ОГН4.RU.1102.В02738)',
     'krany-sharovyie/1',
   ),
-  getDocItem(
-    'Декларация ТР ТС 010 (ЕАЭС N RU Д-RU.АБ53.В.00826_20)',
-    'krany-sharovyie/2',
-  ),
+  // getDocItem(
+  //   'Декларация ТР ТС 010 (ЕАЭС N RU Д-RU.АБ53.В.00826_20)',
+  //   'krany-sharovyie/2',
+  // ),
   getDocItem(
     'Сертификат ТР ТС 012 (ЕАЭС RU C-RU.АЖ58.В.04047_23)',
     'krany-sharovyie/3',
   ),
-  getDocItem(
-    'Декларация ТР ТС 032 (ЕАЭС N RU Д-RU.АД07.В.02532_20)',
-    'krany-sharovyie/4',
-  ),
-  getDocItem(
-    'Сертификат ТР ТС 032 (ЕАЭС RU C-RU.АД07.В.01268_20)',
-    'krany-sharovyie/5',
-  ),
+  // getDocItem(
+  //   'Декларация ТР ТС 032 (ЕАЭС N RU Д-RU.АД07.В.02532_20)',
+  //   'krany-sharovyie/4',
+  // ),
+  // getDocItem(
+  //   'Сертификат ТР ТС 032 (ЕАЭС RU C-RU.АД07.В.01268_20)',
+  //   'krany-sharovyie/5',
+  // ),
   getDocItem(
     'Сертификат климатика (РОСС RU.32001.04ИБФ1.ОСП29.22571)',
     'krany-sharovyie/6',
@@ -51,12 +51,12 @@ const sharovyie = [
     'Сертификат сейсмостойкость (РОСС RU.32001.04ИБФ1.ОСП29.22572)',
     'krany-sharovyie/7',
   ),
+  // getDocItem(
+  //   'Сертификат огнестойкость (РОСС RU.04РИД0.ОСП01.К00137)',
+  //   'krany-sharovyie/8',
+  // ),
   getDocItem(
-    'Сертификат огнестойкость (РОСС RU.04РИД0.ОСП01.К00137)',
-    'krany-sharovyie/8',
-  ),
-  getDocItem(
-    'САНПИН (413)',
+    'Экспертное заключение (413)',
     'krany-sharovyie/9',
   ),
 ];
@@ -65,7 +65,7 @@ export const useProductsDocsStore = defineStore('productsDocsStore', () => {
   const productDocuments: Record<string, DocItem[]> = {
     'zadvizhki-klinovyie-stalnyie': [
       getDocItem(
-        'Сертификат ИНТИ (INTI.QS.PS.20-12-2023-488)',
+        'Заключение (INTI.QS.PS.20-12-2023-488)',
         'zadvizhki-klinovyie-stalnyie/0',
       ),
       getDocItem(
@@ -109,13 +109,13 @@ export const useProductsDocsStore = defineStore('productsDocsStore', () => {
         'zadvizhki-klinovyie-stalnyie/11',
       ),
       getDocItem(
-        'САНПИН (414)',
+        'Экспертное заключение (414)',
         'zadvizhki-klinovyie-stalnyie/10',
       ),
     ],
     'klapany-zapornyie': [
       getDocItem(
-        'Сертификат ИНТИ (INTI.QS.PS.20-12-2023-491)',
+        'Заключение (INTI.QS.PS.20-12-2023-491)',
         'klapany-zapornyie/0',
       ),
       getDocItem(
@@ -145,7 +145,7 @@ export const useProductsDocsStore = defineStore('productsDocsStore', () => {
     ],
     'zatvory-obratnyie': [
       getDocItem(
-        'Сертификат ИНТИ (INTI.QS.PS.20-12-2023-490)',
+        'Заключение (INTI.QS.PS.20-12-2023-490)',
         'zatvory-obratnyie/0',
       ),
       getDocItem(
@@ -181,13 +181,13 @@ export const useProductsDocsStore = defineStore('productsDocsStore', () => {
         'zatvory-obratnyie/7',
       ),
       getDocItem(
-        'САНПИН (449)',
+        'Экспертное заключение (449)',
         'zatvory-obratnyie/9',
       ),
     ],
     'zatvory-diskovyie-povorotnyie-zaslonki': [
       getDocItem(
-        'Сертификат ИНТИ (INTI.QS.PS.20-12-2023-489)',
+        'Заключение (INTI.QS.PS.20-12-2023-489)',
         'zatvory-diskovyie-povorotnyie-zaslonki/0',
       ),
       getDocItem(
@@ -227,7 +227,7 @@ export const useProductsDocsStore = defineStore('productsDocsStore', () => {
         'zatvory-diskovyie-povorotnyie-zaslonki/8',
       ),
       getDocItem(
-        'САНПИН (001515)',
+        'Экспертное заключение (001515)',
         'zatvory-diskovyie-povorotnyie-zaslonki/9',
       ),
     ],
@@ -251,7 +251,7 @@ export const useProductsDocsStore = defineStore('productsDocsStore', () => {
       sharovyie,
     'klapany-stalnyie-pruzhinnyie-priedokhranitielnyie': [
       getDocItem(
-        'Сертификат ИНТИ (INTI.QS.PS.20-12-2023-492)',
+        'Заключение (INTI.QS.PS.20-12-2023-492)',
         'klapany-stalnyie-pruzhinnyie-priedokhranitielnyie/0',
       ),
       getDocItem(
@@ -293,25 +293,25 @@ export const useProductsDocsStore = defineStore('productsDocsStore', () => {
     ],
     'zadvizhki-shibiernyie-zms': [
       getDocItem(
-        'Сертификат ИНТИ (INTI.QS.PS.20-12-2023-488)',
+        'Заключение (INTI.QS.PS.20-12-2023-488)',
         'zadvizhki-shibiernyie-zms/0',
       ),
       getDocItem(
         'Декларация ТР ТС 010 (ЕАЭС N RU Д-RU.РА01.В.95931_20)',
         'zadvizhki-shibiernyie-zms/1',
       ),
-      getDocItem(
-        'Сертификат на тип ЗМС (ЕАЭС RU СТ-RU.КА01.00267)',
-        'zadvizhki-shibiernyie-zms/4',
-      ),
-      getDocItem(
-        'Сертификат на тип ЗД (ЕАЭС RU СТ-RU.КА01.00268)',
-        'zadvizhki-shibiernyie-zms/5',
-      ),
-      getDocItem(
-        'Сертификат на тип ЗДШ (ЕАЭС RU СТ-RU.КА01.00269)',
-        'zadvizhki-shibiernyie-zms/6',
-      ),
+      // getDocItem(
+      //   'Сертификат на тип ЗМС (ЕАЭС RU СТ-RU.КА01.00267)',
+      //   'zadvizhki-shibiernyie-zms/4',
+      // ),
+      // getDocItem(
+      //   'Сертификат на тип ЗД (ЕАЭС RU СТ-RU.КА01.00268)',
+      //   'zadvizhki-shibiernyie-zms/5',
+      // ),
+      // getDocItem(
+      //   'Сертификат на тип ЗДШ (ЕАЭС RU СТ-RU.КА01.00269)',
+      //   'zadvizhki-shibiernyie-zms/6',
+      // ),
       getDocItem(
         'Декларация ТР ТС 032 (ЕАЭС N RU Д-RU.РА01.В.87792_21)',
         'zadvizhki-shibiernyie-zms/2',
@@ -323,17 +323,17 @@ export const useProductsDocsStore = defineStore('productsDocsStore', () => {
     ],
     'zadvizhki-shibiernyie-zsh': [
       getDocItem(
-        'Сертификат ИНТИ (INTI.QS.PS.20-12-2023-488)',
+        'Заключение (INTI.QS.PS.20-12-2023-488)',
         'zadvizhki-shibiernyie-zsh/0',
       ),
       getDocItem(
         'Декларация ТР ТС 010 (ЕАЭС N RU Д-RU.РА05.В.18075_25)',
         'zadvizhki-shibiernyie-zsh/1',
       ),
-      getDocItem(
-        'Сертификат на тип ЗШ (ЕАЭС RU СТ-RU.НВ94.01985)',
-        'zadvizhki-shibiernyie-zsh/2',
-      ),
+      // getDocItem(
+      //   'Сертификат на тип ЗШ (ЕАЭС RU СТ-RU.НВ94.01985)',
+      //   'zadvizhki-shibiernyie-zsh/2',
+      // ),
       getDocItem(
         'Декларация ТР ТС 032 (ЕАЭС N RU Д-RU.РА02.В.91053_25)',
         'zadvizhki-shibiernyie-zsh/3',
@@ -357,37 +357,37 @@ export const useProductsDocsStore = defineStore('productsDocsStore', () => {
     ],
     'ustroistva-pieriekliuchaiushchiie': [
       getDocItem(
-        'Сертификат ИНТИ (INTI.QS.PS.20-12-2023-494)',
+        'Заключение (INTI.QS.PS.20-12-2023-494)',
         'ustroistva-pieriekliuchaiushchiie/0',
       ),
       getDocItem(
         'Декларация ТР ТС 010 (ЕАЭС N RU Д-RU.РА01.В.95941_20)',
         'ustroistva-pieriekliuchaiushchiie/1',
       ),
-      getDocItem(
-        'Декларация ТР ТС 032 (ЕАЭС N RU Д-RU.АД07.В.02535_20)',
-        'ustroistva-pieriekliuchaiushchiie/2',
-      ),
-      getDocItem(
-        'Сертификат ТР ТС 032 (ЕАЭС RU C-RU.АД07.В.01267_20)',
-        'ustroistva-pieriekliuchaiushchiie/3',
-      ),
-      getDocItem(
-        'Сертификат климатика (Серия 001 № 715)',
-        'ustroistva-pieriekliuchaiushchiie/4',
-      ),
-      getDocItem(
-        'Сертификат сейсмостойкость (Серия 001 № 698)',
-        'ustroistva-pieriekliuchaiushchiie/5',
-      ),
-      getDocItem(
-        'Сертификат пожарной безопасность (04ИДЮ0.117.RU.Н.00020)',
-        'ustroistva-pieriekliuchaiushchiie/6',
-      ),
+      // getDocItem(
+      //   'Декларация ТР ТС 032 (ЕАЭС N RU Д-RU.АД07.В.02535_20)',
+      //   'ustroistva-pieriekliuchaiushchiie/2',
+      // ),
+      // getDocItem(
+      //   'Сертификат ТР ТС 032 (ЕАЭС RU C-RU.АД07.В.01267_20)',
+      //   'ustroistva-pieriekliuchaiushchiie/3',
+      // ),
+      // getDocItem(
+      //   'Сертификат климатика (Серия 001 № 715)',
+      //   'ustroistva-pieriekliuchaiushchiie/4',
+      // ),
+      // getDocItem(
+      //   'Сертификат сейсмостойкость (Серия 001 № 698)',
+      //   'ustroistva-pieriekliuchaiushchiie/5',
+      // ),
+      // getDocItem(
+      //   'Сертификат пожарной безопасность (04ИДЮ0.117.RU.Н.00020)',
+      //   'ustroistva-pieriekliuchaiushchiie/6',
+      // ),
     ],
     'bloki-priedokhranitielnykh-klapanov': [
       getDocItem(
-        'Сертификат ИНТИ (INTI.QS.PS.20-12-2023-492)',
+        'Заключение (INTI.QS.PS.20-12-2023-492)',
         'bloki-priedokhranitielnykh-klapanov/0',
       ),
       getDocItem(
@@ -398,10 +398,10 @@ export const useProductsDocsStore = defineStore('productsDocsStore', () => {
         'Декларация ТР ТС 010 (ЕАЭС N RU Д-RU.РА02.В.86887_25)',
         'bloki-priedokhranitielnykh-klapanov/2',
       ),
-      getDocItem(
-        'Сертификат на тип БПК (ЕАЭС RU СТ-RU.НВ94.01980)',
-        'bloki-priedokhranitielnykh-klapanov/3',
-      ),
+      // getDocItem(
+      //   'Сертификат на тип БПК (ЕАЭС RU СТ-RU.НВ94.01980)',
+      //   'bloki-priedokhranitielnykh-klapanov/3',
+      // ),
       getDocItem(
         'Сертификат ТР ТС 012 (ЕАЭС RU C-RU.HB82.B.00429_25)',
         'bloki-priedokhranitielnykh-klapanov/4',
