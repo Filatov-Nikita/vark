@@ -102,13 +102,13 @@ const customers: Record<string, Customer[]> = {
   ],
   neft: [
     generalPhone,
-    {
-      name: 'Гудым Анатолий Андреевич',
-      position: 'Директор департамента продаж нефтегазового оборудования',
-      phone: '+7 (964) 956 11 11',
-      phoneCap: '(доб. 127)',
-      email: 'GudymAA@vark.ru',
-    },
+    // {
+    //   name: 'Гудым Анатолий Андреевич',
+    //   position: 'Директор департамента продаж нефтегазового оборудования',
+    //   phone: '+7 (964) 956 11 11',
+    //   phoneCap: '(доб. 127)',
+    //   email: 'GudymAA@vark.ru',
+    // },
   ],
   tender: [
     generalPhone,
